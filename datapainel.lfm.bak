@@ -1,0 +1,426 @@
+object dmPainel: TdmPainel
+  OldCreateOrder = False
+  Height = 201
+  HorizontalOffset = 386
+  VerticalOffset = 213
+  Width = 287
+  object resFil: TZQuery
+    Connection = DMPrincipal.zCon
+    SQL.Strings = (
+      'select cdper, dcper, DTFIM, cdfil, dcfil, sum(qtven) qtd, sum(ttven) vlr from RESUMO_VENDAS'
+      'group by cdper, dcper, DTFIM, cdfil, dcfil'
+      'order by cdper, cdfil'
+    )
+    Params = <>
+    left = 24
+    top = 16
+    object resFilCDPER: TLongintField
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'CDPER'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object resFilDCPER: TStringField
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'DCPER'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object resFilDTFIM: TDateField
+      FieldKind = fkData
+      FieldName = 'DTFIM'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'mm/yyyy'
+    end
+    object resFilCDFIL: TLongintField
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'CDFIL'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object resFilDCFIL: TStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DCFIL'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object resFilQTD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'QTD'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      DisplayFormat = '0000'
+    end
+    object resFilVLR: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLR'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      DisplayFormat = ',#0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+  end
+  object res: TZQuery
+    Connection = DMPrincipal.zCon
+    SortedFields = 'CODIGO'
+    SQL.Strings = (
+      'select first 12 tp.codigo, tp.dcper, coalesce(tp.qtper,0) qtper, coalesce(tp.ttper,0.0) ttper,'
+      '       coalesce(tpf1.qtfil,0) qtfil1, coalesce(tpf1.ttfil,0.0) vlfil1,'
+      '       coalesce(tpf2.qtfil,0) qtfil2, coalesce(tpf2.ttfil,0.0) vlfil2,'
+      '       coalesce(tpf3.qtfil,0) qtfil3, coalesce(tpf3.ttfil,0.0) vlfil3,'
+      '       coalesce(tpfo.qtfil,0) qtfilo, coalesce(tpfo.ttfil,0.0) vlfilo  from tot_per tp'
+      'left outer join tot_per_fil tpf1 on tpf1.periodo=tp.codigo and tpf1.filial=1'
+      'left outer join tot_per_fil tpf2 on tpf2.periodo=tp.codigo and tpf2.filial=2'
+      'left outer join tot_per_fil tpf3 on tpf3.periodo=tp.codigo and tpf3.filial=3'
+      'left outer join tot_per_fil tpfo on tpfo.periodo=tp.codigo and tpfo.filial is null'
+      'order by tp.codigo desc'
+    )
+    Params = <>
+    IndexFieldNames = 'CODIGO Asc'
+    left = 80
+    top = 16
+    object resCODIGO: TLongintField
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object resDCPER: TStringField
+      FieldKind = fkData
+      FieldName = 'DCPER'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object resQTPER: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTPER'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '000'
+    end
+    object resTTPER: TFloatField
+      FieldKind = fkData
+      FieldName = 'TTPER'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object resQTFIL1: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTFIL1'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '000'
+    end
+    object resVLFIL1: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLFIL1'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object resQTFIL2: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTFIL2'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '000'
+    end
+    object resVLFIL2: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLFIL2'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object resQTFIL3: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTFIL3'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '000'
+    end
+    object resVLFIL3: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLFIL3'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object resQTFILO: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTFILO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '000'
+    end
+    object resVLFILO: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLFILO'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+  end
+  object emp: TZQuery
+    Connection = DMPrincipal.zCon
+    SortedFields = 'CODIGO'
+    SQL.Strings = (
+      'select first 12 tp.codigo, tp.dcper, coalesce(tp.qtper,0) qtper, coalesce(tp.ttper,0.0) ttper,'
+      '       coalesce(tpe1.qtemp,0) qtemp1, coalesce(tpe1.ttemp,0.0) vlemp1,'
+      '       coalesce(tpe2.qtemp,0) qtemp2, coalesce(tpe2.ttemp,0.0) vlemp2,'
+      '       coalesce(tpe3.qtemp,0) qtemp3, coalesce(tpe3.ttemp,0.0) vlemp3,'
+      '       coalesce(tpe4.qtemp,0) qtemp4, coalesce(tpe4.ttemp,0.0) vlemp4,'
+      '       coalesce(tpe5.qtemp,0) qtemp5, coalesce(tpe5.ttemp,0.0) vlemp5 from tot_per tp'
+      'left outer join tot_per_emp tpe1 on tpe1.periodo=tp.codigo and tpe1.empresa=1'
+      'left outer join tot_per_emp tpe2 on tpe2.periodo=tp.codigo and tpe2.empresa=2'
+      'left outer join tot_per_emp tpe3 on tpe3.periodo=tp.codigo and tpe3.empresa=3'
+      'left outer join tot_per_emp tpe4 on tpe4.periodo=tp.codigo and tpe4.empresa=4'
+      'left outer join tot_per_emp tpe5 on tpe5.periodo=tp.codigo and tpe5.empresa=5'
+      'order by tp.codigo desc'
+    )
+    Params = <>
+    IndexFieldNames = 'CODIGO Asc'
+    left = 136
+    top = 16
+    object empCODIGO: TLongintField
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object empDCPER: TStringField
+      FieldKind = fkData
+      FieldName = 'DCPER'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object empQTPER: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTPER'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+    end
+    object empTTPER: TFloatField
+      FieldKind = fkData
+      FieldName = 'TTPER'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object empQTEMP1: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTEMP1'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+    end
+    object empVLEMP1: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLEMP1'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object empQTEMP2: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTEMP2'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+    end
+    object empVLEMP2: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLEMP2'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object empQTEMP3: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTEMP3'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+    end
+    object empVLEMP3: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLEMP3'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object empQTEMP4: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTEMP4'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+    end
+    object empVLEMP4: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLEMP4'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object empQTEMP5: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTEMP5'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+    end
+    object empVLEMP5: TFloatField
+      FieldKind = fkData
+      FieldName = 'VLEMP5'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+  end
+end

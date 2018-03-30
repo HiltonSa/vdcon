@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="66">
+      <Unit0>
+        <Filename Value="vdcon.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="21"/>
+        <CursorPos Y="40"/>
+        <UsageCount Value="201"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="formprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="205"/>
+        <CursorPos X="22" Y="222"/>
+        <UsageCount Value="201"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="dataprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="345"/>
+        <CursorPos Y="363"/>
+        <UsageCount Value="201"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="util.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="246"/>
+        <CursorPos X="3" Y="249"/>
+        <UsageCount Value="200"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="formmsg.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMsg"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="22" Y="9"/>
+        <UsageCount Value="200"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="formlogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos Y="49"/>
+        <UsageCount Value="200"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="formsobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSobre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos X="78" Y="8"/>
+        <UsageCount Value="201"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="formgrusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmGrUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="200"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="formfgrusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFGrUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="57"/>
+        <CursorPos Y="60"/>
+        <UsageCount Value="200"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="formusuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmUsuarios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="59"/>
+        <CursorPos Y="158"/>
+        <UsageCount Value="200"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="formfusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="124"/>
+        <CursorPos X="12" Y="120"/>
+        <UsageCount Value="200"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="formrotgru.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRotGru"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="127"/>
+        <CursorPos X="57" Y="142"/>
+        <UsageCount Value="200"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="formexcgrusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmExcGrUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="73"/>
+        <CursorPos X="13" Y="81"/>
+        <UsageCount Value="200"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="datatabelas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMTab"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="95"/>
+        <CursorPos X="3" Y="97"/>
+        <UsageCount Value="202"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="formtrsenha.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmTrSenha"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="59"/>
+        <CursorPos X="45" Y="74"/>
+        <UsageCount Value="202"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="formagentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAgentes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="111"/>
+        <CursorPos Y="130"/>
+        <UsageCount Value="205"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="formfagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFAgente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="71"/>
+        <CursorPos Y="91"/>
+        <UsageCount Value="205"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="formfiliais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFiliais"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="30"/>
+        <CursorPos Y="39"/>
+        <UsageCount Value="204"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="formffilial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFFilial"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="63"/>
+        <CursorPos Y="83"/>
+        <UsageCount Value="204"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="formequipes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmEquipes"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="122"/>
+        <CursorPos Y="130"/>
+        <UsageCount Value="201"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="formfequipe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFEquipe"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="58"/>
+        <CursorPos Y="77"/>
+        <UsageCount Value="200"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="formempresas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmEmpresas"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="70"/>
+        <CursorPos Y="81"/>
+        <UsageCount Value="200"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="formfempresa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFEmpresa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="103"/>
+        <CursorPos Y="64"/>
+        <UsageCount Value="201"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="formregrascomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRgCom"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="99"/>
+        <CursorPos X="3" Y="101"/>
+        <UsageCount Value="202"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="formfregra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFRegra"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="132"/>
+        <CursorPos Y="137"/>
+        <UsageCount Value="200"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="formvendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="157"/>
+        <CursorPos X="3" Y="167"/>
+        <UsageCount Value="206"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="datavendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="355"/>
+        <CursorPos X="3" Y="357"/>
+        <UsageCount Value="206"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="formfvenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFVenda"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="238"/>
+        <CursorPos X="3" Y="241"/>
+        <UsageCount Value="205"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="formfaixas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFaixas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="92"/>
+        <CursorPos X="52" Y="108"/>
+        <UsageCount Value="206"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="formffaixa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFFaixa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="108"/>
+        <CursorPos X="67" Y="9"/>
+        <UsageCount Value="206"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="formparcelas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmParcelas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="78"/>
+        <CursorPos Y="97"/>
+        <UsageCount Value="201"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="formfparcela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFParcela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="29"/>
+        <CursorPos X="45" Y="78"/>
+        <UsageCount Value="204"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="formrecautomatico.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRecAutomatico"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="168"/>
+        <CursorPos Y="168"/>
+        <UsageCount Value="200"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="relbaixacomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelBaixaComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="63"/>
+        <CursorPos Y="75"/>
+        <UsageCount Value="201"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="formcalcularcomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCalcularComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="77"/>
+        <CursorPos X="47" Y="133"/>
+        <UsageCount Value="201"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="relpagarcomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelPagarComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="65"/>
+        <CursorPos Y="69"/>
+        <UsageCount Value="201"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="datasiacon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmScn"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="294"/>
+        <CursorPos X="3" Y="296"/>
+        <UsageCount Value="209"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="formautor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAutor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="22"/>
+        <CursorPos X="3" Y="35"/>
+        <UsageCount Value="200"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="formselcomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="119"/>
+        <CursorPos X="50" Y="129"/>
+        <UsageCount Value="203"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="formrecmanual.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRecManual"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="125"/>
+        <CursorPos X="16" Y="128"/>
+        <UsageCount Value="201"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="relparcelaspendentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelParPend"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="59"/>
+        <CursorPos Y="78"/>
+        <UsageCount Value="202"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="formselparcelaspendentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelParcelasPendentes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="60"/>
+        <CursorPos X="15" Y="76"/>
+        <UsageCount Value="200"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="formreceberparcela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmReceberParcela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="51"/>
+        <CursorPos X="3" Y="55"/>
+        <UsageCount Value="201"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="relproducao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelProducao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="75"/>
+        <CursorPos Y="92"/>
+        <UsageCount Value="200"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="formselproducaovendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelProdVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="173"/>
+        <CursorPos Y="183"/>
+        <UsageCount Value="200"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="formpainel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmPainel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="173"/>
+        <CursorPos Y="208"/>
+        <UsageCount Value="195"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="datapainel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmPainel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="80"/>
+        <CursorPos X="11" Y="109"/>
+        <UsageCount Value="188"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="formselresumoperiodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelResumoPeriodo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="29"/>
+        <CursorPos Y="38"/>
+        <UsageCount Value="118"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="relresumoperiodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelResumoPeriodo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="61"/>
+        <CursorPos Y="80"/>
+        <UsageCount Value="117"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="formselcancelamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelCancelamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="84"/>
+        <CursorPos X="48" Y="94"/>
+        <UsageCount Value="111"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="relcancelamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelCancelamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="104"/>
+        <CursorPos X="3" Y="115"/>
+        <UsageCount Value="109"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="formselvendasagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelVendasAgente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="89"/>
+        <CursorPos X="29" Y="104"/>
+        <UsageCount Value="106"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="relvendasagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelVendasAgente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="80"/>
+        <CursorPos Y="99"/>
+        <UsageCount Value="105"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLReport.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12746"/>
+        <CursorPos Y="12754"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="..\..\CompLazarus\zeos\src\dbc\ZDbcInterbase6Utils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="828"/>
+        <CursorPos Y="837"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="..\..\CompLazarus\zeos\src\dbc\ZDbcOracleUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="707"/>
+        <CursorPos Y="716"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="..\..\components\tachart\tageometry.pas"/>
+        <UnitName Value="TAGeometry"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="548"/>
+        <CursorPos Y="558"/>
+        <UsageCount Value="5"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="..\..\components\tachart\tadbsource.pas"/>
+        <UnitName Value="TADbSource"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="166"/>
+        <CursorPos Y="176"/>
+        <UsageCount Value="8"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="..\..\components\tachart\taseries.pas"/>
+        <UnitName Value="TASeries"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1055"/>
+        <CursorPos Y="1065"/>
+        <UsageCount Value="3"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="..\..\components\tachart\tacustomsource.pas"/>
+        <UnitName Value="TACustomSource"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="580"/>
+        <CursorPos Y="590"/>
+        <UsageCount Value="4"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="..\..\components\tachart\tamath.pas"/>
+        <UnitName Value="TAMath"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="127"/>
+        <CursorPos X="3" Y="129"/>
+        <UsageCount Value="4"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="..\..\components\tachart\tachartutils.pas"/>
+        <UnitName Value="TAChartUtils"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="387"/>
+        <CursorPos X="3" Y="389"/>
+        <UsageCount Value="4"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="..\..\lcl\stringhashlist.pas"/>
+        <UnitName Value="StringHashList"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="345"/>
+        <CursorPos X="31" Y="355"/>
+        <UsageCount Value="10"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="..\..\components\codetools\basiccodetools.pas"/>
+        <UnitName Value="BasicCodeTools"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos X="32" Y="42"/>
+        <UsageCount Value="10"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
+        <ComponentName Value="RLPreviewForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="1367"/>
+        <CursorPos X="36" Y="1376"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="..\..\CompLazarus\richmemo\win32\win32richmemoproc.pas"/>
+        <UnitName Value="Win32RichMemoProc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="246"/>
+        <CursorPos X="10" Y="256"/>
+        <UsageCount Value="10"/>
+      </Unit65>
+    </Units>
+    <JumpHistory Count="4" HistoryIndex="3">
+      <Position1>
+        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
+        <Caret Line="387" Column="24" TopLine="377"/>
+      </Position1>
+      <Position2>
+        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
+        <Caret Line="67" Column="80" TopLine="50"/>
+      </Position2>
+      <Position3>
+        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
+        <Caret Line="60" Column="31" TopLine="54"/>
+      </Position3>
+      <Position4>
+        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
+        <Caret Line="387" Column="20" TopLine="377"/>
+      </Position4>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

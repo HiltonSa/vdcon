@@ -1,0 +1,246 @@
+object FrmVendas: TFrmVendas
+  Left = 323
+  Height = 422
+  Top = 149
+  Width = 884
+  BorderStyle = bsSizeToolWin
+  Caption = 'Vendas'
+  ClientHeight = 422
+  ClientWidth = 884
+  KeyPreview = True
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  Position = poMainFormCenter
+  ShowHint = True
+  LCLVersion = '1.6.4.0'
+  object stBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 399
+    Width = 884
+    Panels = <>
+  end
+  object Panel1: TPanel
+    Left = 786
+    Height = 399
+    Top = 0
+    Width = 98
+    Align = alRight
+    BevelInner = bvLowered
+    ClientHeight = 399
+    ClientWidth = 98
+    Color = clMoneyGreen
+    ParentColor = False
+    TabOrder = 1
+    object SpeedButton1: TSpeedButton
+      Left = 0
+      Height = 30
+      Top = 216
+      Width = 90
+      Action = Incluir
+      Flat = True
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 4
+      Height = 30
+      Top = 264
+      Width = 90
+      Action = Alterar
+      Flat = True
+    end
+    object SpeedButton3: TSpeedButton
+      Left = 4
+      Height = 30
+      Top = 312
+      Width = 90
+      Action = Excluir
+      Flat = True
+    end
+    object SpeedButton4: TSpeedButton
+      Left = 4
+      Height = 30
+      Top = 360
+      Width = 90
+      Action = Fechar
+      Flat = True
+    end
+    object btPesq: TSpeedButton
+      Left = 4
+      Height = 36
+      Top = 8
+      Width = 90
+      Action = Pesq
+      Flat = True
+      Layout = blGlyphTop
+    end
+    object SpeedButton5: TSpeedButton
+      Left = 4
+      Height = 30
+      Top = 60
+      Width = 90
+      Action = parcela
+      Flat = True
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 399
+    Top = 0
+    Width = 786
+    Align = alClient
+    BevelInner = bvLowered
+    ClientHeight = 399
+    ClientWidth = 786
+    TabOrder = 2
+    object Panel3: TPanel
+      Left = 2
+      Height = 58
+      Top = 2
+      Width = 782
+      Align = alTop
+      BevelInner = bvLowered
+      ClientHeight = 58
+      ClientWidth = 782
+      Color = clSkyBlue
+      ParentColor = False
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 13
+        Height = 15
+        Top = 6
+        Width = 71
+        Caption = 'Pesquisar por'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 144
+        Height = 15
+        Top = 6
+        Width = 83
+        Caption = 'Pesquisar o que'
+        ParentColor = False
+      end
+      object edtPesq: TEdit
+        Left = 144
+        Height = 23
+        Top = 22
+        Width = 232
+        CharCase = ecUppercase
+        TabOrder = 0
+      end
+      object cboCampo: TComboBox
+        Left = 13
+        Height = 23
+        Top = 22
+        Width = 123
+        ItemHeight = 15
+        ItemIndex = 1
+        Items.Strings = (
+          'Código'
+          'Nome Cliente'
+          'Nome Vendedor'
+          'Contrato'
+          'Empresa'
+        )
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'Nome Cliente'
+      end
+    end
+    object grPesq: TDBGrid
+      Left = 2
+      Height = 312
+      Top = 60
+      Width = 782
+      Align = alClient
+      AlternateColor = clBtnFace
+      AutoEdit = False
+      Color = clWindow
+      Columns = <>
+      DataSource = dsPesq
+      FixedCols = 0
+      Options = [dgTitles, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+      ReadOnly = True
+      TabOrder = 1
+      TabStop = False
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      OnTitleClick = grPesqTitleClick
+    end
+    object nvPesq: TDBNavigator
+      Left = 2
+      Height = 25
+      Top = 372
+      Width = 782
+      Align = alBottom
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 25
+      ClientWidth = 782
+      DataSource = dsPesq
+      Flat = True
+      Options = []
+      TabOrder = 2
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    end
+  end
+  object AL: TActionList
+    Images = DMPrincipal.IL
+    left = 88
+    top = 124
+    object Pesq: TAction
+      Caption = 'Pesquisar (F10)'
+      ImageIndex = 0
+      OnExecute = PesqExecute
+      ShortCut = 121
+    end
+    object Incluir: TAction
+      Caption = 'Novo (F2)'
+      Hint = 'Incluir Venda'
+      ImageIndex = 2
+      OnExecute = IncluirExecute
+      ShortCut = 113
+    end
+    object Alterar: TAction
+      Caption = 'Alterar (F3)'
+      Enabled = False
+      Hint = 'Alterar Venda'
+      ImageIndex = 1
+      OnExecute = AlterarExecute
+      ShortCut = 114
+    end
+    object Excluir: TAction
+      Caption = 'Excluir (F4)'
+      Enabled = False
+      Hint = 'Excluir Venda'
+      ImageIndex = 6
+      OnExecute = ExcluirExecute
+      ShortCut = 115
+    end
+    object Fechar: TAction
+      Caption = 'Fechar (Esc)'
+      ImageIndex = 7
+      OnExecute = FecharExecute
+    end
+    object parcela: TAction
+      Caption = 'Parcelas (F5)'
+      Enabled = False
+      Hint = 'Tratar Parcelas da Venda'
+      ImageIndex = 25
+      OnExecute = parcelaExecute
+      ShortCut = 116
+    end
+  end
+  object dsPesq: TDataSource
+    DataSet = DMVendas.psqVendas
+    OnStateChange = dsPesqStateChange
+    left = 44
+    top = 124
+  end
+end

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="10"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <AutoCreateForms Value="False"/>
+      <Title Value="Vendas de Consórcio"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <RevisionNr Value="1"/>
+      <BuildNr Value="20"/>
+      <StringTable Comments="Gerenciar comissões a pagar e a receber sobre vendas de consórcio." CompanyName="Corvette Informática" ProductName="VdCon" ProductVersion="0"/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="8">
+      <Item1>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="laz_fpspreadsheet"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="MemDSLaz"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="FCL"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="zcomponent"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="frce"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="LCL"/>
+      </Item8>
+    </RequiredPackages>
+    <Units Count="53">
+      <Unit0>
+        <Filename Value="vdcon.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="formprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="dataprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="util.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="formmsg.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMsg"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="formlogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="formsobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSobre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="formgrusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmGrUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="formfgrusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFGrUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="formusuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmUsuarios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="formfusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="formrotgru.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRotGru"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="formexcgrusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmExcGrUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="datatabelas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMTab"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="formtrsenha.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmTrSenha"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="formagentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAgentes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="formfagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFAgente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="formfiliais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFiliais"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="formffilial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFFilial"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="formequipes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmEquipes"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="formfequipe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFEquipe"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="formempresas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmEmpresas"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="formfempresa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFEmpresa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="formregrascomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRgCom"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="formfregra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFRegra"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="formvendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="datavendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="formfvenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFVenda"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="formfaixas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFaixas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="formffaixa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFFaixa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="formparcelas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmParcelas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="formfparcela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFParcela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="formrecautomatico.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRecAutomatico"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="relbaixacomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelBaixaComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="formcalcularcomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCalcularComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="relpagarcomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelPagarComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="datasiacon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmScn"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="formautor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAutor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="formselcomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="formrecmanual.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRecManual"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="relparcelaspendentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelParPend"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="formselparcelaspendentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelParcelasPendentes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="formreceberparcela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmReceberParcela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="relproducao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelProducao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="formselproducaovendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelProdVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="formpainel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmPainel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="datapainel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmPainel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="formselresumoperiodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelResumoPeriodo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="relresumoperiodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelResumoPeriodo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="formselcancelamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelCancelamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="relcancelamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelCancelamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="formselvendasagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelVendasAgente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="relvendasagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelVendasAgente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit52>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="c:\sistemas\vdcon\vdcon"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

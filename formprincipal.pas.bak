@@ -1,0 +1,385 @@
+unit formprincipal;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
+  Menus, ActnList, ExtCtrls, dataprincipal, formsobre, formgrusu, formusuarios,
+  formtrsenha, formequipes, dateutils;
+
+type
+
+  { TFrmPrincipal }
+
+  TFrmPrincipal = class(TForm)
+    acSair: TAction;
+    acSobre: TAction;
+    acGrUsu: TAction;
+    acCalc: TAction;
+    acAgentes: TAction;
+    acEquipes: TAction;
+    acFiliais: TAction;
+    acEmpresa: TAction;
+    acRegra: TAction;
+    acFaixa: TAction;
+    acRecebida: TAction;
+    acCalculo: TAction;
+    acRecManual: TAction;
+    acImportar: TAction;
+    acPainel: TAction;
+    MenuItem40: TMenuItem;
+    relVenAgente: TAction;
+    MenuItem39: TMenuItem;
+    relCancelamentos: TAction;
+    MenuItem38: TMenuItem;
+    relResumo: TAction;
+    MenuItem37: TMenuItem;
+    relProdVendas: TAction;
+    MenuItem36: TMenuItem;
+    relParPend: TAction;
+    MenuItem32: TMenuItem;
+    MenuItem33: TMenuItem;
+    MenuItem34: TMenuItem;
+    MenuItem35: TMenuItem;
+    relComissao: TAction;
+    impSiacon: TAction;
+    acVendas: TAction;
+    acTrSenha: TAction;
+    acUsuarios: TAction;
+    acTrImagem: TAction;
+    acTrUsu: TAction;
+    al: TActionList;
+    AE: TApplicationProperties;
+    BckGrnd: TImage;
+    IL: TImageList;
+    MenuItem1: TMenuItem;
+    MenuItem10: TMenuItem;
+    MenuItem11: TMenuItem;
+    MenuItem12: TMenuItem;
+    MenuItem13: TMenuItem;
+    MenuItem14: TMenuItem;
+    MenuItem15: TMenuItem;
+    MenuItem16: TMenuItem;
+    MenuItem17: TMenuItem;
+    MenuItem18: TMenuItem;
+    MenuItem19: TMenuItem;
+    MenuItem2: TMenuItem;
+    MenuItem20: TMenuItem;
+    MenuItem21: TMenuItem;
+    MenuItem22: TMenuItem;
+    MenuItem23: TMenuItem;
+    MenuItem24: TMenuItem;
+    MenuItem25: TMenuItem;
+    MenuItem26: TMenuItem;
+    MenuItem27: TMenuItem;
+    MenuItem28: TMenuItem;
+    MenuItem29: TMenuItem;
+    MenuItem3: TMenuItem;
+    MenuItem30: TMenuItem;
+    MenuItem31: TMenuItem;
+    MenuItem4: TMenuItem;
+    MenuItem5: TMenuItem;
+    MenuItem6: TMenuItem;
+    MenuItem7: TMenuItem;
+    MenuItem8: TMenuItem;
+    MenuItem9: TMenuItem;
+    mm: TMainMenu;
+    Panel1: TPanel;
+    pm: TPopupMenu;
+    stBar: TStatusBar;
+    TB: TToolBar;
+    ToolButton1: TToolButton;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
+    ToolButton4: TToolButton;
+    ToolButton5: TToolButton;
+    ToolButton6: TToolButton;
+    procedure acAgentesExecute(Sender: TObject);
+    procedure acCalculoExecute(Sender: TObject);
+    procedure acEmpresaExecute(Sender: TObject);
+    procedure acEquipesExecute(Sender: TObject);
+    procedure acFaixaExecute(Sender: TObject);
+    procedure acFiliaisExecute(Sender: TObject);
+    procedure acGrUsuExecute(Sender: TObject);
+    procedure acImportarExecute(Sender: TObject);
+    procedure acPainelExecute(Sender: TObject);
+    procedure acRecebidaExecute(Sender: TObject);
+    procedure acRecManualExecute(Sender: TObject);
+    procedure acRegraExecute(Sender: TObject);
+    procedure acSairExecute(Sender: TObject);
+    procedure acSobreExecute(Sender: TObject);
+    procedure acCalcExecute(Sender: TObject);
+    procedure acTrImagemExecute(Sender: TObject);
+    procedure acTrSenhaExecute(Sender: TObject);
+    procedure acTrUsuExecute(Sender: TObject);
+    procedure acUsuariosExecute(Sender: TObject);
+    procedure acVendasExecute(Sender: TObject);
+    procedure AEException(Sender: TObject; E: Exception);
+    procedure AEHint(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure impSiaconExecute(Sender: TObject);
+    procedure MenuItem2Click(Sender: TObject);
+    procedure relCancelamentosExecute(Sender: TObject);
+    procedure relComissaoExecute(Sender: TObject);
+    procedure relParPendExecute(Sender: TObject);
+    procedure relProdVendasExecute(Sender: TObject);
+    procedure relResumoExecute(Sender: TObject);
+    procedure relVenAgenteExecute(Sender: TObject);
+    procedure TBClick(Sender: TObject);
+  private
+    { private declarations }
+    procedure SetarUsuario;
+  public
+    { public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+uses util, formagentes, formfiliais, formempresas, formregrascomissao,
+  formvendas, formfaixas, formrecautomatico, formcalcularcomissao, datasiacon,
+  formselcomissao, formrecmanual, formselparcelaspendentes,
+  formselproducaovendas, formpainel, formselresumoperiodo, formselcancelamentos,
+  formselvendasagente;
+
+{$R *.lfm}
+
+{ TFrmPrincipal }
+
+procedure TFrmPrincipal.AEException(Sender: TObject; E: Exception);
+var
+    NomeDoLog, nomeComputador: string;
+    Arquivo: TextFile;
+begin
+// if (E is EDatabaseError) then begin
+    NomeDoLog := ChangeFileExt(Application.Exename, '.err');
+    AssignFile(Arquivo, NomeDoLog);
+    nomeComputador := DMPrincipal.NomeComputadorAtual;
+
+    if FileExists(NomeDoLog) { *Converted from FileExists* }
+    then Append(arquivo) { se existir, apenas adiciona linhas }
+    else ReWrite(arquivo); { cria um novo se nÃ£o existir }
+
+    try
+      WriteLn(arquivo,  DateTimeToStr(Now) + ': Usuario:' +DMPrincipal.UsuNom+' Computador: ' +nomeComputador);
+      WriteLn(arquivo, 'Erro:' + E.Message);
+      WriteLn(arquivo,'----------------------------------------------------------------------');
+    finally
+      CloseFile(arquivo)
+    end;
+// end;
+ Application.ShowException(E);
+end;
+
+procedure TFrmPrincipal.acSairExecute(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TFrmPrincipal.acGrUsuExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmGrUsu,FrmGrUsu);
+end;
+
+procedure TFrmPrincipal.acImportarExecute(Sender: TObject);
+begin
+  if ConfirmaMensagem('Confirma a importação das Vendas do Siacon?')
+  then begin
+    dmScn.incluirVendasProprias(IncDay(Date,-15));
+    MostraAviso('Fim de importação!');
+  end;
+end;
+
+procedure TFrmPrincipal.acPainelExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmPainel,FrmPainel);
+end;
+
+procedure TFrmPrincipal.acRecebidaExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmRecAutomatico, FrmRecAutomatico);
+end;
+
+procedure TFrmPrincipal.acRecManualExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmRecManual,FrmRecManual);
+end;
+
+procedure TFrmPrincipal.acRegraExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmRgCom,FrmRgCom);
+end;
+
+procedure TFrmPrincipal.acAgentesExecute(Sender: TObject);
+begin
+  //DMPrincipal.CriaForm(TFrmAgentes,FrmAgentes);
+  DMPrincipal.CriaFormFilho(TFrmAgentes,FrmAgentes);
+end;
+
+procedure TFrmPrincipal.acCalculoExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmCalcularComissao, FrmCalcularComissao);
+end;
+
+procedure TFrmPrincipal.acEmpresaExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmEmpresas, FrmEmpresas);
+end;
+
+procedure TFrmPrincipal.acEquipesExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmEquipes, FrmEquipes);
+end;
+
+procedure TFrmPrincipal.acFaixaExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmFaixas, FrmFaixas);
+end;
+
+procedure TFrmPrincipal.acFiliaisExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmFiliais, FrmFiliais);
+end;
+
+procedure TFrmPrincipal.acSobreExecute(Sender: TObject);
+begin
+  FrmSobre := TFrmSobre.Create(nil);
+  try
+    FrmSobre.ShowModal;
+  finally
+    FrmSobre.Free;
+  end;
+end;
+
+procedure TFrmPrincipal.acCalcExecute(Sender: TObject);
+begin
+  DMPrincipal.MostrarCalc;
+end;
+
+procedure TFrmPrincipal.acTrImagemExecute(Sender: TObject);
+begin
+    if DMPrincipal.AbrirFig.Execute then begin
+       DMPrincipal.UsuFig := DMPrincipal.AbrirFig.FileName;
+       DMPrincipal.GravarImagem;
+       BckGrnd.Picture.LoadFromFile(DMPrincipal.UsuFig);
+    end;
+end;
+
+procedure TFrmPrincipal.acTrSenhaExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmTrSenha,FrmTrSenha);
+end;
+
+procedure TFrmPrincipal.acTrUsuExecute(Sender: TObject);
+begin
+    if DMPrincipal.LogarUsuario then begin
+      SetarUsuario;
+      DMPrincipal.AplicarRestricoes(FrmPrincipal);
+    end
+    else Application.Terminate;
+end;
+
+procedure TFrmPrincipal.acUsuariosExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmUsuarios,FrmUsuarios);
+end;
+
+procedure TFrmPrincipal.acVendasExecute(Sender: TObject);
+begin
+  //DMPrincipal.CriaForm(TFrmVendas, FrmVendas);
+  DMPrincipal.CriaFormFilho(TFrmVendas, FrmVendas);
+end;
+
+
+procedure TFrmPrincipal.AEHint(Sender: TObject);
+begin
+  stBar.Panels[3].Text:=Application.Hint;
+end;
+
+procedure TFrmPrincipal.FormClose(Sender: TObject; var CloseAction: TCloseAction
+  );
+begin
+    if not ConfirmaMensagem('Confirma o encerramento?')
+    then CloseAction := caNone
+    else DMPrincipal.zCon.Disconnect;
+end;
+
+procedure TFrmPrincipal.FormCreate(Sender: TObject);
+begin
+  DMPrincipal.VerificarRotinas(FrmPrincipal);
+  DMPrincipal.AplicarRestricoes(FrmPrincipal);
+end;
+
+procedure TFrmPrincipal.FormShow(Sender: TObject);
+begin
+  SetarUsuario;
+end;
+
+procedure TFrmPrincipal.impSiaconExecute(Sender: TObject);
+begin
+  if DMPrincipal.Autorizar
+  then dmScn.importarVendas
+  else MostraAviso('Não autorizado!');
+end;
+
+procedure TFrmPrincipal.MenuItem2Click(Sender: TObject);
+begin
+
+end;
+
+procedure TFrmPrincipal.relCancelamentosExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmSelCancelamentos, FrmSelCancelamentos);
+end;
+
+procedure TFrmPrincipal.relComissaoExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmSelComissao,FrmSelComissao);
+end;
+
+procedure TFrmPrincipal.relParPendExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmSelParcelasPendentes, FrmSelParcelasPendentes);
+end;
+
+procedure TFrmPrincipal.relProdVendasExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmSelProdVendas, FrmSelProdVendas);
+end;
+
+procedure TFrmPrincipal.relResumoExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmSelResumoPeriodo, FrmSelResumoPeriodo);
+end;
+
+procedure TFrmPrincipal.relVenAgenteExecute(Sender: TObject);
+begin
+  DMPrincipal.CriaForm(TFrmSelVendasAgente,FrmSelVendasAgente);
+end;
+
+procedure TFrmPrincipal.TBClick(Sender: TObject);
+begin
+
+end;
+
+
+procedure TFrmPrincipal.SetarUsuario;
+begin
+  DMPrincipal.SetUsu;
+  stBar.Panels[1].Text := DMPrincipal.UsuNom;
+  stBar.Panels[2].Text := FormatDateTime('dddd, dd "de" mmmm "de" yyyy', Date);
+  stBar.Panels[5].Text:=DMPrincipal.ImpNom;
+  stBar.Panels[6].Text := DMPrincipal.UsuFil;
+  stBar.Panels[7].Text:=DMPrincipal.PerNom;
+  if FileExists(DMPrincipal.UsuFig) then
+    BckGrnd.Picture.LoadFromFile(DMPrincipal.UsuFig);
+end;
+
+end.
+

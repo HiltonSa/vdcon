@@ -1,0 +1,183 @@
+unit formfusu;
+
+{$MODE Delphi}
+
+interface
+
+uses
+  LCLIntf, LCLType, LMessages, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, Dialogs, Buttons, DBCtrls, StdCtrls, MaskEdit, ExtCtrls, DB,
+  BufDataset, memds, ImgList, ActnList;
+
+type
+
+  { TFrmFUsu }
+
+  TFrmFUsu = class(TForm)
+    AL: TActionList;
+    bufUsu: TBufDataset;
+    bufUsuAtivo: TLongintField;
+    bufUsuCodigo: TLongintField;
+    bufUsuFilial: TLongintField;
+    bufUsuGruUsu: TLongintField;
+    bufUsuImagem: TStringField;
+    bufUsuSenha: TStringField;
+    bufUsuUsuario: TStringField;
+    Gravar: TAction;
+    Cancelar: TAction;
+    ds: TDataSource;
+    dsGrUsu: TDataSource;
+    Panel1: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label4: TLabel;
+    DBEdit1: TDBEdit;
+    edDesc: TDBEdit;
+    cboGrUsu: TDBLookupComboBox;
+    btGravar: TSpeedButton;
+    btCancelar: TSpeedButton;
+    edtSenha: TDBEdit;
+    Label3: TLabel;
+    Panel2: TPanel;
+    Senha: TAction;
+    btSnh: TSpeedButton;
+    Reiniciar: TAction;
+    btReiniciar: TSpeedButton;
+    cbAtivo: TCheckBox;
+    dsFil: TDataSource;
+    Label5: TLabel;
+    cboFil: TDBLookupComboBox;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    procedure edDescExit(Sender: TObject);
+    procedure ReiniciarExecute(Sender: TObject);
+    procedure GravarExecute(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormCreate(Sender: TObject);
+    procedure CancelarExecute(Sender: TObject);
+    procedure SenhaExecute(Sender: TObject);
+  private
+    FAlterando: Boolean;
+    procedure SetAlterando(AValue: Boolean);
+    { Private declarations }
+  public
+    { Public declarations }
+    property Alterando: Boolean read FAlterando write SetAlterando;
+  end;
+
+var
+  FrmFUsu: TFrmFUsu;
+
+implementation
+
+uses DataPrincipal, util, datatabelas;
+
+{$R *.lfm}
+
+procedure TFrmFUsu.CancelarExecute(Sender: TObject);
+begin
+  bufUsu.Cancel;
+  ModalResult := mrCancel;
+end;
+
+procedure TFrmFUsu.edDescExit(Sender: TObject);
+begin
+  if not FAlterando
+  then edtSenha.Text := edDesc.Text;
+end;
+
+procedure TFrmFUsu.FormCreate(Sender: TObject);
+begin
+  Reiniciar.Visible := False;
+  bufUsu.CreateDataset;
+  bufUsu.Append;
+
+  DMPrincipal.AbrirPesquisa(DMPrincipal.cdsPsqGrUsu,
+                      'select CODIGO, DESCRICAO from ZZ_GRUSU order by DESCRICAO');
+  DMTab.AbrirPesquisa(DMTab.qryPsqFil,'select * from FILIAIS order by DESCRICAO');
+end;
+
+procedure TFrmFUsu.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  case Key of
+    VK_RETURN: SelectNext(ActiveControl,True,True);
+    VK_ESCAPE: Cancelar.Execute;
+  end;
+end;
+
+procedure TFrmFUsu.GravarExecute(Sender: TObject);
+begin
+  if edDesc.Text = '' then begin
+    MostraAviso('Precisa informar NOME!');
+    edDesc.SetFocus;
+  end
+  else if bufUsuGruUsu.Value = 0 then begin
+    MostraAviso('Precisa informar GRUPO DE USUÁRIO!');
+    cboGrUsu.SetFocus;
+  end
+  else if (bufUsuFilial.Value = 0) and not ConfirmaMensagem(
+           'USUARIO sem FILIAL acessa dados de todas as filiais. Confirma?')
+  then cboFil.SetFocus
+  else if ConfirmaMensagem('Confirma a gravação?') then begin
+     if cbAtivo.Checked
+     then bufUsuAtivo.Value := 1
+     else bufUsuAtivo.Value := 0;
+     if FAlterando
+     then DMPrincipal.manterUsuario(1,
+              bufUsuCodigo.Value,
+              bufUsuGruUsu.Value,
+              bufUsuAtivo.Value,
+              bufUsuFilial.Value,
+              bufUsuUsuario.Value,
+              bufUsuSenha.Value,
+              bufUsuImagem.Value)
+     else DMPrincipal.manterUsuario(0, 0,
+                       bufUsuGruUsu.Value,
+                       bufUsuAtivo.Value,
+                       bufUsuFilial.Value,
+                       bufUsuUsuario.Value,
+                       bufUsuSenha.Value,
+                       bufUsuImagem.Value);
+     bufUsu.Cancel;
+     ModalResult := mrOk;
+  end;
+end;
+
+procedure TFrmFUsu.ReiniciarExecute(Sender: TObject);
+begin
+  edtSenha.PasswordChar := #0;
+  edtSenha.Text := 'CRV123';
+end;
+
+procedure TFrmFUsu.SenhaExecute(Sender: TObject);
+begin
+  if edtSenha.PasswordChar = #0
+  then edtSenha.PasswordChar := '*'
+  else edtSenha.PasswordChar := #0;
+end;
+
+procedure TFrmFUsu.SetAlterando(AValue: Boolean);
+begin
+  FAlterando:=AValue;
+  if FAlterando then begin
+     Caption := 'Alterando Usuário';
+     cbAtivo.Checked := (DMPrincipal.cdsPesqUsuATIVO.Value = 1);
+     Reiniciar.Visible := True;
+     bufUsuCodigo.Value:=DMPrincipal.cdsPesqUsuCODIGO.Value;
+     bufUsuUsuario.Value:=DMPrincipal.cdsPesqUsuUSUARIO.Value;
+     bufUsuGruUsu.Value:=DMPrincipal.cdsPesqUsuGRUSU.Value;
+     bufUsuFilial.Value:=DMPrincipal.cdsPesqUsuFILIAL.Value;
+     bufUsuAtivo.Value:=DMPrincipal.cdsPesqUsuATIVO.Value;
+     bufUsuSenha.Value:=DMPrincipal.cdsPesqUsuSENHA.Value;
+  end
+  else begin
+      Caption := 'Incluindo Usuário';
+      bufUsuAtivo.Value := 1;
+      cbAtivo.Enabled := False;
+      bufUsuSenha.Value := 'CRV123';
+  end;
+
+end;
+
+end.

@@ -1,0 +1,123 @@
+unit formffilial;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, db, BufDataset, FileUtil, Forms, Controls, Graphics,
+  Dialogs, ActnList, ExtCtrls, StdCtrls, DbCtrls, Buttons, LCLType;
+
+type
+
+  { TFrmFFilial }
+
+  TFrmFFilial = class(TForm)
+    AL: TActionList;
+    cboEqp: TDBLookupComboBox;
+    dsAge: TDataSource;
+    DBEdit1: TDBEdit;
+    edCpf3: TDBEdit;
+    edNome: TDBEdit;
+    fil: TBufDataset;
+    Cancelar: TAction;
+    ds: TDataSource;
+    filCod: TLongintField;
+    filDesc: TStringField;
+    filExt: TStringField;
+    filResp: TLongintField;
+    Gravar: TAction;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label4: TLabel;
+    Label9: TLabel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    procedure CancelarExecute(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure GravarExecute(Sender: TObject);
+  private
+    Falterando: Boolean;
+    procedure Setalterando(AValue: Boolean);
+    { private declarations }
+  public
+    { public declarations }
+    property alterando: Boolean read Falterando write Setalterando;
+  end;
+
+var
+  FrmFFilial: TFrmFFilial;
+
+implementation
+
+uses datatabelas, dataprincipal, util;
+
+{$R *.lfm}
+
+{ TFrmFFilial }
+
+procedure TFrmFFilial.FormCreate(Sender: TObject);
+begin
+  ds.DataSet.Close;
+  // Agentes com nivel de supervisao = gerente (3) e ativos
+  DMTab.AbrirPesquisa(DMTab.psqAgentes,
+     'select * from AGENTES where SUPERVISAO = 3 and ATIVO = 1 order by NOME');
+end;
+
+procedure TFrmFFilial.CancelarExecute(Sender: TObject);
+begin
+  fil.Cancel;
+  ModalResult:=mrCancel;
+end;
+
+procedure TFrmFFilial.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  case Key of
+    VK_RETURN: SelectNext(ActiveControl,True,True);
+    VK_ESCAPE: Cancelar.Execute;
+  end;
+end;
+
+procedure TFrmFFilial.GravarExecute(Sender: TObject);
+begin
+  if edNome.Text = '' then begin
+    MostraAviso('Precisa informar FILIAL!');
+    edNome.SetFocus;
+  end
+  else if ConfirmaMensagem('Confirma a gravação?') then begin
+     if Fatualizando
+     then DMTab.manterFilial(1,
+              filCod.Value,
+              filResp.Value,
+              filDesc.Value,
+              filExt.Value)
+     else DMTab.manterFilial(0, 0,
+               filResp.Value,
+               filDesc.Value,
+               filExt.Value);
+     fil.Cancel;
+     ModalResult := mrOk;
+  end;
+end;
+
+procedure TFrmFFilial.Setalterando(AValue: Boolean);
+begin
+  Falterando:=AValue;
+  fil.CreateDataset;
+  fil.Append;
+  if Falterando then begin
+     Caption:='Alterando Filial';
+     filDesc.Value:=DMTab.psqFiliaisDESCRICAO.AsString;
+     filExt.Value:=DMTab.psqFiliaisCODEXTERNO.AsString;
+     filResp.Value:=DMTab.psqFiliaisRESPONSAVEL.AsInteger;
+     filCod.Value:=DMTab.psqFiliaisCODIGO.AsInteger;
+  end
+  else Caption:='Incluindo Filial;
+end;
+
+end.
+

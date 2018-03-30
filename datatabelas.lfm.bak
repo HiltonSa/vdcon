@@ -1,0 +1,434 @@
+object DMTab: TDMTab
+  OldCreateOrder = False
+  Height = 150
+  HorizontalOffset = 657
+  VerticalOffset = 166
+  Width = 271
+  object qryPsqFil: TZQuery
+    Connection = DMPrincipal.zCon
+    SQL.Strings = (
+      'select * from FILIAIS'
+    )
+    Params = <>
+    left = 40
+    top = 16
+    object qryPsqFilCODIGO: TLongintField
+      DisplayLabel = 'Cód'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '000'
+    end
+    object qryPsqFilDESCRICAO: TStringField
+      DisplayLabel = 'Descrição'
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'DESCRICAO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qryPsqFilRESPONSAVEL: TLongintField
+      FieldKind = fkData
+      FieldName = 'RESPONSAVEL'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+    end
+    object qryPsqFilCODEXTERNO: TStringField
+      FieldKind = fkData
+      FieldName = 'CODEXTERNO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+      Size = 40
+    end
+  end
+  object psqAgentes: TZQuery
+    Connection = DMPrincipal.zCon
+    SQL.Strings = (
+      'select * from AGENTES'
+    )
+    Params = <>
+    left = 40
+    top = 72
+    object psqAgentesCODIGO: TLongintField
+      DisplayLabel = 'Código'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '000000'
+    end
+    object psqAgentesNOME: TStringField
+      DisplayLabel = 'Nome'
+      DisplayWidth = 25
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 320
+    end
+    object psqAgentesCPF: TStringField
+      FieldKind = fkData
+      FieldName = 'CPF'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+      Size = 44
+    end
+    object psqAgentesDDD: TStringField
+      FieldKind = fkData
+      FieldName = 'DDD'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+      Size = 8
+    end
+    object psqAgentesCELULAR: TStringField
+      FieldKind = fkData
+      FieldName = 'CELULAR'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+      Size = 40
+    end
+    object psqAgentesEQUIPE: TLongintField
+      FieldKind = fkData
+      FieldName = 'EQUIPE'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+    end
+    object psqAgentesSUPERVISAO: TLongintField
+      FieldKind = fkData
+      FieldName = 'SUPERVISAO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+    end
+    object psqAgentesATIVO: TLongintField
+      Alignment = taLeftJustify
+      DisplayLabel = 'Sit'
+      FieldKind = fkData
+      FieldName = 'ATIVO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = psqAgentesATIVOGetText
+    end
+    object psqAgentesCDEXTERNO: TStringField
+      FieldKind = fkData
+      FieldName = 'CDEXTERNO'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+      Size = 60
+    end
+  end
+  object psqSuper: TZQuery
+    Connection = DMPrincipal.zCon
+    SQL.Strings = (
+      'select * from SUPERVISAO order by DESCRICAO'
+    )
+    Params = <>
+    left = 96
+    top = 16
+    object psqSuperCODIGO: TLongintField
+      DisplayLabel = 'Cód'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '00'
+    end
+    object psqSuperDESCRICAO: TStringField
+      DisplayLabel = 'Descrição'
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'DESCRICAO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object psqSuperVDPROPRIA: TLongintField
+      FieldKind = fkData
+      FieldName = 'VDPROPRIA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+    end
+  end
+  object psqEqpe: TZQuery
+    Connection = DMPrincipal.zCon
+    SQL.Strings = (
+      'select * from EQUIPES order by DESCRICAO'
+    )
+    Params = <>
+    left = 96
+    top = 72
+    object psqEqpeCODIGO: TLongintField
+      DisplayLabel = 'Cód'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '000'
+    end
+    object psqEqpeDESCRICAO: TStringField
+      DisplayLabel = 'Descrição'
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'DESCRICAO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object psqEqpeFILIAL: TLongintField
+      FieldKind = fkData
+      FieldName = 'FILIAL'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+    end
+    object psqEqpeSUPERVISOR: TLongintField
+      FieldKind = fkData
+      FieldName = 'SUPERVISOR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+    end
+  end
+  object psqFiliais: TZQuery
+    Connection = DMPrincipal.zCon
+    SQL.Strings = (
+      'select * from FILIAIS order by DESCRICAO'
+    )
+    Params = <>
+    left = 152
+    top = 16
+    object psqFiliaisCODIGO: TLongintField
+      DisplayLabel = 'Código'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '000'
+    end
+    object psqFiliaisDESCRICAO: TStringField
+      DisplayLabel = 'Descrição'
+      DisplayWidth = 25
+      FieldKind = fkData
+      FieldName = 'DESCRICAO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object psqFiliaisRESPONSAVEL: TLongintField
+      FieldKind = fkData
+      FieldName = 'RESPONSAVEL'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+    end
+    object psqFiliaisCODEXTERNO: TStringField
+      FieldKind = fkData
+      FieldName = 'CODEXTERNO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+      Size = 40
+    end
+  end
+  object psqBens: TZQuery
+    Connection = DMPrincipal.zCon
+    SQL.Strings = (
+      'select * from BENS where EMPRESA=:e and CDBEM=:c'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'e'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'c'
+        ParamType = ptInput
+      end>
+    left = 152
+    top = 72
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'e'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftString
+        Name = 'c'
+        ParamType = ptInput
+      end>
+    object psqBensEMPRESA: TLongintField
+      FieldKind = fkData
+      FieldName = 'EMPRESA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object psqBensCDBEM: TStringField
+      FieldKind = fkData
+      FieldName = 'CDBEM'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object psqBensDCBEM: TStringField
+      FieldKind = fkData
+      FieldName = 'DCBEM'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object psqBensVALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object psqBensQTD: TLongintField
+      FieldKind = fkData
+      FieldName = 'QTD'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object psqSit: TZQuery
+    Connection = DMPrincipal.zCon
+    SQL.Strings = (
+      'select * from SITCON'
+      'order by DESCRICAO'
+    )
+    Params = <>
+    left = 200
+    top = 16
+    object psqSitCODIGO: TLongintField
+      DefaultExpression = '00'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'CODIGO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = 'Cód'
+    end
+    object psqSitDESCRICAO: TStringField
+      DisplayLabel = 'Descrição'
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'DESCRICAO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+  end
+end

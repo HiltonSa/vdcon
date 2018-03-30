@@ -1,0 +1,371 @@
+object FrmFParcela: TFrmFParcela
+  Left = 513
+  Height = 161
+  Top = 206
+  Width = 460
+  BorderStyle = bsToolWindow
+  Caption = 'Parcela'
+  ClientHeight = 161
+  ClientWidth = 460
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  Position = poMainFormCenter
+  ShowHint = True
+  LCLVersion = '1.6.4.0'
+  object Panel2: TPanel
+    Left = 369
+    Height = 161
+    Top = 0
+    Width = 91
+    Align = alRight
+    BevelInner = bvLowered
+    ClientHeight = 161
+    ClientWidth = 91
+    Color = clMoneyGreen
+    ParentColor = False
+    TabOrder = 0
+    object SpeedButton1: TSpeedButton
+      Left = 2
+      Height = 39
+      Top = 63
+      Width = 87
+      Action = Gravar
+      Flat = True
+      Layout = blGlyphTop
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 2
+      Height = 39
+      Top = 111
+      Width = 87
+      Action = Cancelar
+      Flat = True
+      Layout = blGlyphTop
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 161
+    Top = 0
+    Width = 369
+    Align = alClient
+    BevelInner = bvLowered
+    ClientHeight = 161
+    ClientWidth = 369
+    Color = clSkyBlue
+    ParentColor = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 8
+      Height = 15
+      Top = 11
+      Width = 38
+      Caption = 'Parcela'
+      ParentColor = False
+    end
+    object DBEdit1: TDBEdit
+      Left = 8
+      Height = 23
+      Top = 30
+      Width = 48
+      DataField = 'Pcl'
+      DataSource = ds
+      ReadOnly = True
+      CharCase = ecNormal
+      Color = clBtnFace
+      MaxLength = 0
+      TabOrder = 7
+      TabStop = False
+    end
+    object Label2: TLabel
+      Left = 63
+      Height = 15
+      Top = 11
+      Width = 63
+      Caption = 'Vencimento'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 169
+      Height = 15
+      Top = 60
+      Width = 59
+      Caption = 'Vlr Receber'
+      ParentColor = False
+    end
+    object DBEdit3: TDBEdit
+      Left = 169
+      Height = 23
+      Top = 79
+      Width = 88
+      DataField = 'Receber'
+      DataSource = ds
+      CharCase = ecNormal
+      MaxLength = 0
+      TabOrder = 3
+    end
+    object edDtRec: TDBDateTimePicker
+      Left = 63
+      Height = 23
+      Top = 79
+      Width = 96
+      DataField = 'DtRec'
+      DataSource = ds
+      ReadOnly = False
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      AutoSize = False
+      TabOrder = 2
+      TrailingSeparator = False
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+    object Label4: TLabel
+      Left = 63
+      Height = 15
+      Top = 60
+      Width = 85
+      Caption = 'Dt.Recebimento'
+      ParentColor = False
+    end
+    object edRecebido: TDBEdit
+      Left = 268
+      Height = 23
+      Top = 79
+      Width = 88
+      DataField = 'Recebido'
+      DataSource = ds
+      CharCase = ecNormal
+      MaxLength = 0
+      TabOrder = 4
+    end
+    object Label5: TLabel
+      Left = 268
+      Height = 15
+      Top = 60
+      Width = 66
+      Caption = 'Vlr Recebido'
+      ParentColor = False
+    end
+    object edDtVenc: TDBDateTimePicker
+      Left = 63
+      Height = 23
+      Top = 30
+      Width = 96
+      DataField = 'DtVenc'
+      DataSource = ds
+      ReadOnly = False
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      AutoSize = False
+      TabOrder = 0
+      TrailingSeparator = False
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+    object DBEdit4: TDBEdit
+      Left = 64
+      Height = 23
+      Top = 127
+      Width = 92
+      DataField = 'Pagar'
+      DataSource = ds
+      CharCase = ecNormal
+      MaxLength = 0
+      TabOrder = 5
+    end
+    object Label6: TLabel
+      Left = 64
+      Height = 15
+      Top = 108
+      Width = 47
+      Caption = 'Vlr Pagar'
+      ParentColor = False
+    end
+    object DBEdit5: TDBEdit
+      Left = 170
+      Height = 23
+      Top = 127
+      Width = 88
+      DataField = 'Pago'
+      DataSource = ds
+      CharCase = ecNormal
+      MaxLength = 0
+      TabOrder = 6
+    end
+    object Label7: TLabel
+      Left = 170
+      Height = 15
+      Top = 108
+      Width = 44
+      Caption = 'Vlr Pago'
+      ParentColor = False
+    end
+    object cboPer: TDBLookupComboBox
+      Left = 169
+      Height = 23
+      Top = 29
+      Width = 187
+      AutoComplete = True
+      DataField = 'Per'
+      DataSource = ds
+      KeyField = 'CODIGO'
+      ListField = 'DESCRICAO'
+      ListFieldIndex = 0
+      ListSource = dsPer
+      LookupCache = False
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object Label18: TLabel
+      Left = 169
+      Height = 15
+      Top = 11
+      Width = 75
+      Caption = 'Período Pagto'
+      ParentColor = False
+    end
+  end
+  object AL: TActionList
+    Images = DMPrincipal.IL
+    left = 424
+    top = 8
+    object Gravar: TAction
+      Caption = 'Gravar (F2)'
+      ImageIndex = 4
+      OnExecute = GravarExecute
+      ShortCut = 113
+    end
+    object Cancelar: TAction
+      Caption = 'Cancelar (Esc)'
+      ImageIndex = 5
+      OnExecute = CancelarExecute
+    end
+  end
+  object par: TBufDataset
+    FieldDefs = <>
+    left = 384
+    top = 8
+    object parVenda: TLongintField
+      FieldKind = fkData
+      FieldName = 'Venda'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object parPcl: TLongintField
+      FieldKind = fkData
+      FieldName = 'Pcl'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '00'
+    end
+    object parDtVenc: TDateField
+      FieldKind = fkData
+      FieldName = 'DtVenc'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'dd/mm/yyyy'
+    end
+    object parPer: TLongintField
+      FieldKind = fkData
+      FieldName = 'Per'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object parReceber: TFloatField
+      FieldKind = fkData
+      FieldName = 'Receber'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object parRecebido: TFloatField
+      FieldKind = fkData
+      FieldName = 'Recebido'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object parPagar: TFloatField
+      FieldKind = fkData
+      FieldName = 'Pagar'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object parPago: TFloatField
+      FieldKind = fkData
+      FieldName = 'Pago'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object parDtRec: TDateField
+      FieldKind = fkData
+      FieldName = 'DtRec'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'dd/mm/yyyy'
+    end
+  end
+  object ds: TDataSource
+    DataSet = par
+    left = 312
+    top = 115
+  end
+  object dsPer: TDataSource
+    DataSet = DMTab.psqPer
+    left = 280
+    top = 115
+  end
+end

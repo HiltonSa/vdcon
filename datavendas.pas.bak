@@ -1,0 +1,542 @@
+unit datavendas;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, db, BufDataset, FileUtil, ZDataset;
+
+type
+
+  { TDMVendas }
+
+  TDMVendas = class(TDataModule)
+    ageCDAGE: TLongintField;
+    ageCDBEM: TStringField;
+    ageCDEMP: TLongintField;
+    ageCDEQP: TLongintField;
+    ageCDPER: TLongintField;
+    ageCDSIT: TLongintField;
+    ageCDVEN: TLongintField;
+    ageCONTRATO: TStringField;
+    ageCOTA: TLongintField;
+    ageDCBEM: TStringField;
+    ageDCEQP: TStringField;
+    ageDCFIL: TStringField;
+    ageDCPER: TStringField;
+    ageDCSIT: TStringField;
+    ageDTFIM: TDateField;
+    ageDTINI: TDateField;
+    ageDTVENDA: TDateField;
+    ageGRUPO: TStringField;
+    ageNMAGE: TStringField;
+    ageNMCLI: TStringField;
+    ageNMEMP: TStringField;
+    ageSTAGE: TLongintField;
+    ageVALOR: TFloatField;
+    ageVLPAG: TFloatField;
+    ageVLPGO: TFloatField;
+    ageVLRCB: TFloatField;
+    ageVLREC: TFloatField;
+    canCDAGE: TLongintField;
+    canCDBEM: TStringField;
+    canCDEMP: TLongintField;
+    canCDEQP: TLongintField;
+    canCDSIT: TLongintField;
+    canCDVEN: TLongintField;
+    canCONTRATO: TStringField;
+    canCOTA: TLongintField;
+    canDCBEM: TStringField;
+    canDCEQP: TStringField;
+    canDCFIL: TStringField;
+    canDCSIT: TStringField;
+    canDTCAN: TDateField;
+    canDTVENDA: TDateField;
+    canESTORNADO: TFloatField;
+    canGRUPO: TStringField;
+    canNMAGE: TStringField;
+    canNMCLI: TStringField;
+    canNMEMP: TStringField;
+    canPERIODO: TLongintField;
+    canSTAGE: TLongintField;
+    canTTRCB: TFloatField;
+    canVALOR: TFloatField;
+    canVLPAG: TFloatField;
+    canVLPGO: TFloatField;
+    canVLRCB: TFloatField;
+    canVLREC: TFloatField;
+    comPerCDEQP: TLongintField;
+    comPerCDPER: TLongintField;
+    comPerCDVDA: TLongintField;
+    comPerCDVEN: TLongintField;
+    comPerCONTRATO: TStringField;
+    comPerCOTA: TLongintField;
+    comPerDCBEM: TStringField;
+    comPerDCEMP: TStringField;
+    comPerDCEQP: TStringField;
+    comPerDCPER: TStringField;
+    comPerDTFIM: TDateField;
+    comPerDTINI: TDateField;
+    comPerDTVENDA: TDateField;
+    comPerEXVEN: TStringField;
+    comPerFILIAL: TLongintField;
+    comPerGRUPO: TStringField;
+    comPerNMCLI: TStringField;
+    comPerNMVEN: TStringField;
+    comPerPAGAR: TFloatField;
+    comPerPARCELA: TLongintField;
+    comPerVALOR: TFloatField;
+    parCOTA: TLongintField;
+    parDTREC: TDateField;
+    parDTVENC: TDateField;
+    parGRUPO: TStringField;
+    parPAGAR: TFloatField;
+    parPAGO: TFloatField;
+    parPARCELA: TLongintField;
+    parPERIODO: TLongintField;
+    parRECEBER: TFloatField;
+    parRECEBIDO: TFloatField;
+    parVENDA: TLongintField;
+    pndCDVEN: TLongintField;
+    pndCONTRATO: TStringField;
+    pndCOTA: TLongintField;
+    pndDCBEM: TStringField;
+    pndDTREC: TDateField;
+    pndDTVENC: TDateField;
+    pndDTVENDA: TDateField;
+    pndGRUPO: TStringField;
+    pndNMCLI: TStringField;
+    pndNMEMP: TStringField;
+    pndPAGAR: TFloatField;
+    pndPAGO: TFloatField;
+    pndPARCELA: TLongintField;
+    pndPERIODO: TLongintField;
+    pndRECEBER: TFloatField;
+    pndRECEBIDO: TFloatField;
+    pndVALOR: TFloatField;
+    pndVENDA: TLongintField;
+    proCDAGE: TLongintField;
+    proCDBEM: TStringField;
+    proCDEMP: TLongintField;
+    proCDEQP: TLongintField;
+    proCDSIT: TLongintField;
+    proCDVEN: TLongintField;
+    proCONTRATO: TStringField;
+    proCOTA: TLongintField;
+    proDCBEM: TStringField;
+    proDCEQP: TStringField;
+    proDCFIL: TStringField;
+    proDCSIT: TStringField;
+    proDTVENDA: TDateField;
+    proGRUPO: TStringField;
+    proNMAGE: TStringField;
+    proNMCLI: TStringField;
+    proNMEMP: TStringField;
+    proSTAGE: TLongintField;
+    proVALOR: TFloatField;
+    proVLPAG: TFloatField;
+    proVLPGO: TFloatField;
+    proVLRCB: TFloatField;
+    proVLREC: TFloatField;
+    psqParDTREC: TDateField;
+    psqParDTVENC: TDateField;
+    psqParPAGAR: TFloatField;
+    psqParPAGO: TFloatField;
+    psqParPARCELA: TLongintField;
+    psqParPERIODO: TLongintField;
+    psqParRECEBER: TFloatField;
+    psqParRECEBIDO: TFloatField;
+    psqParVENDA: TLongintField;
+    psqPerCODIGO: TLongintField;
+    psqPerDESCRICAO: TStringField;
+    psqPerDTCAL: TDateField;
+    psqPerDTFIM: TDateField;
+    psqPerDTINI: TDateField;
+    psqVendas: TZQuery;
+    psqVendasAGENTE: TLongintField;
+    psqVendasCDBEM: TStringField;
+    psqVendasCODIGO: TLongintField;
+    psqVendasCONTRATO: TStringField;
+    psqVendasCOTA: TLongintField;
+    psqVendasCPFCNPJ: TStringField;
+    psqVendasDCBEM: TStringField;
+    psqVendasDCSIT: TStringField;
+    psqVendasDDD: TStringField;
+    psqVendasDIAVENC: TLongintField;
+    psqVendasDTCON: TDateField;
+    psqVendasDTVENDA: TDateField;
+    psqVendasEMPRESA: TLongintField;
+    psqVendasFONE: TStringField;
+    psqVendasGRUPO: TStringField;
+    psqVendasNMAGE: TStringField;
+    psqVendasNMEMP: TStringField;
+    psqVendasNOME: TStringField;
+    psqVendasPERIODO: TLongintField;
+    psqVendasSITUACAO: TLongintField;
+    psqVendasTPPES: TLongintField;
+    psqVendasVALOR: TFloatField;
+    psqVendasVLRPAGO: TFloatField;
+    psqPar: TZQuery;
+    par: TZQuery;
+    resCDAGE: TLongintField;
+    resCDEQP: TLongintField;
+    resCDFIL: TLongintField;
+    resCDPER: TLongintField;
+    resDCEQP: TStringField;
+    resDCFIL: TStringField;
+    resDCPER: TStringField;
+    resDTFIM: TDateField;
+    resDTINI: TDateField;
+    resNMAGE: TStringField;
+    resQTVEN: TLongintField;
+    resSTAGE: TLongintField;
+    resTTPAG: TFloatField;
+    resTTRCB: TFloatField;
+    resTTVEN: TFloatField;
+    segCONTRATO: TStringField;
+    segCOTA: TLongintField;
+    segDTREC: TDateField;
+    segDTVENC: TDateField;
+    segGRUPO: TStringField;
+    segNOME: TStringField;
+    segPAGAR: TFloatField;
+    segPAGO: TFloatField;
+    segPARCELA: TLongintField;
+    segPERIODO: TLongintField;
+    segRECEBER: TFloatField;
+    segRECEBIDO: TFloatField;
+    segVENDA: TLongintField;
+    ttAgeAGENTE: TLongintField;
+    ttAgeQTDE: TLongintField;
+    ttAgeTTVAL: TFloatField;
+    psqPer: TZQuery;
+    comPer: TZReadOnlyQuery;
+    ven: TBufDataset;
+    venAgente: TLongintField;
+    venCdBen: TStringField;
+    venCod: TLongintField;
+    venCota: TLongintField;
+    venCpfCnpj: TStringField;
+    venCtrato: TStringField;
+    venDcBem: TStringField;
+    venDDD: TStringField;
+    venDiaVen: TLongintField;
+    venDtCon: TDateField;
+    venEmp: TLongintField;
+    venFone: TStringField;
+    venGrupo: TStringField;
+    venNome: TStringField;
+    venPer: TLongintField;
+    venSit: TLongintField;
+    venTpPes: TLongintField;
+    venValor: TFloatField;
+    venVenda: TDateField;
+    venVlrPago: TFloatField;
+    seg: TZQuery;
+    pnd: TZQuery;
+    pro: TZQuery;
+    res: TZQuery;
+    can: TZQuery;
+    age: TZQuery;
+    procedure DataModuleCreate(Sender: TObject);
+    procedure resSTAGEGetText(Sender: TField; var aText: string;
+      DisplayText: Boolean);
+  private
+    { private declarations }
+  public
+    { public declarations }
+    procedure manterVendas(modo, cod, emp, agente, per, sit, pes, cota,
+      diaven: Integer; ctrato, cdbem, dcbem, nome, ddd, fone, cpfcnpj,
+      gru: String; dtven, dtcon: TDate; valor, vlrpago: Double);
+    procedure manterParcelas(modo,venda,parcela,periodo: Integer;
+      dtvenc,dtrec: TDate; receber, recebido, pagar, pago: Double);
+    function acharParcela(emp: Integer; ctrato: String; pcl: Integer): Boolean;
+    procedure calcularComissoes(periodo: Integer);
+    function abrirRelComissoes(periodo: Integer): Boolean;
+    function obterVenda(cod: Integer; contrato: string):Boolean;
+    function abrirPeriodo(stSql: string): Boolean;
+    function abrirPendenciaComissao(itPsq:Integer; stPesq:String): Boolean;
+    function abrirPsqVendas(itPsq: Integer; stPesq: String): Boolean;
+    procedure imprimirParcelasPendentes();
+    function abrirProducao(stSql: String): Boolean;
+    function abrirResumoPeriodo(per: Integer): Boolean;
+    function abrirCancelamentos(ini, fim: TDate): Boolean;
+    function abrirVendasAgente(agente: Integer): Boolean;
+  end;
+
+var
+  DMVendas: TDMVendas;
+
+implementation
+
+uses dataprincipal, relparcelaspendentes, util;
+
+{$R *.lfm}
+
+{ TDMVendas }
+
+procedure TDMVendas.DataModuleCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TDMVendas.resSTAGEGetText(Sender: TField; var aText: string;
+  DisplayText: Boolean);
+begin
+  aText:=retornaSitAgente(Sender.AsInteger);
+end;
+
+procedure TDMVendas.manterVendas(modo, cod, emp, agente, per, sit, pes,
+  cota, diaven: Integer; ctrato, cdbem, dcbem, nome, ddd, fone, cpfcnpj, gru: String;
+  dtven, dtcon: TDate; valor, vlrpago: Double);
+begin
+  with DMPrincipal.sp do begin
+    Close;
+    StoredProcName:='MANTER_VENDAS';
+    ParamByName('MODO').Value:=modo;
+    ParamByName('COD').Value:=cod;
+    ParamByName('EMPRESA').Value:=emp;
+    ParamByName('CONTRATO').Value:=ctrato;
+    ParamByName('AGENTE').Value:=agente;
+    ParamByName('DTVENDA').Value:=dtven;
+    ParamByName('PERIODO').Value:=per;
+    ParamByName('CDBEM').Value:=cdbem;
+    ParamByName('DCBEM').Value:=dcbem;
+    ParamByName('VALOR').Value:=valor;
+    ParamByName('SIT').Value:=sit;
+    ParamByName('DTCON').Value:=dtcon;
+    ParamByName('NOME').Value:=nome;
+    ParamByName('DDD').Value:=ddd;
+    ParamByName('FONE').Value:=fone;
+    ParamByName('TPPES').Value:=pes;
+    ParamByName('CPFCNPJ').Value:=cpfcnpj;
+    ParamByName('GRUPO').Value:=gru;
+    ParamByName('COTA').Value:=cota;
+    ParamByName('DIAVENC').Value:=diaven;
+    ParamByName('VLRPAGO').Value:=vlrpago;
+    ExecProc;
+  end;
+end;
+
+procedure TDMVendas.manterParcelas(modo, venda, parcela, periodo: Integer;
+  dtvenc, dtrec: TDate; receber, recebido, pagar, pago: Double);
+begin
+  with DMPrincipal.sp do begin
+    Close;
+    StoredProcName:='MANTER_PARCELAS';
+    ParamByName('MODO').Value:=modo;
+    ParamByName('VENDA').Value:=venda;
+    ParamByName('PARCELA').Value:=parcela;
+    ParamByName('DTVENC').Value:=dtvenc;
+    ParamByName('PERIODO').Value:=periodo;
+    ParamByName('RECEBER').Value:=receber;
+    ParamByName('RECEBIDO').Value:=recebido;
+    ParamByName('PAGAR').Value:=pagar;
+    ParamByName('PAGO').Value:=pago;
+    ParamByName('DTREC').Value:=dtrec;
+    ExecProc;
+  end;
+end;
+
+function TDMVendas.acharParcela(emp: Integer; ctrato: String; pcl: Integer
+  ): Boolean;
+begin
+  with par do begin
+    Close;
+    Params[0].Value:=emp;
+    Params[1].Value:=ctrato;
+    Params[2].Value:=pcl;
+    Open;
+    Result:= not EOF;
+  end;
+end;
+
+procedure TDMVendas.calcularComissoes(periodo: Integer);
+begin
+  with DMPrincipal.sp do
+  begin
+    Close;
+    StoredProcName:='CALCULAR_COMISSAO';
+    ParamByName('PERIODO').Value:=periodo;
+    ExecProc;
+  end;
+end;
+
+function TDMVendas.abrirRelComissoes(periodo, fil: Integer): Boolean;
+var
+  stSQL: String;
+begin
+  if fil=0
+  then stSQL:=Format('select * from RELATORIO_COMISSOES(%d)',[periodo])
+  else stSQL:=Format('select * from RELATORIO_COMISSOES(%d) where FILIAL=%d',[periodo, fil])
+  with comPer do begin
+    Close;
+    SQL.Clear;
+    SQL.Add(stSQL);
+    Open;
+    Result := not EOF;
+  end;
+end;
+
+function TDMVendas.obterVenda(cod: Integer; contrato: string): Boolean;
+begin
+  if cod > 0
+  then DMPrincipal.executarSQL(Format('select * from VENDAS where CODIGO=%d',[cod]))
+  else DMPrincipal.executarSQL(Format('select * from VENDAS where CONTRATO=%s',[QuotedStr(contrato)]));
+  if DMPrincipal.qry.EOF
+  then Result := False
+  else begin
+
+    if ven.Active
+    then ven.Close;
+
+    ven.CreateDataset;
+    ven.Append;
+
+    venCod.Value:=DMPrincipal.qry.FieldByName('CODIGO').AsInteger;
+    venEmp.Value:=DMPrincipal.qry.FieldByName('EMPRESA').AsInteger;
+    venCtrato.Value:=DMPrincipal.qry.FieldByName('CONTRATO').AsString;
+    venAgente.Value:=DMPrincipal.qry.FieldByName('AGENTE').AsInteger;
+    venVenda.Value:=DMPrincipal.qry.FieldByName('DTVENDA').AsDateTime;
+    venPer.Value:=DMPrincipal.qry.FieldByName('PERIODO').AsInteger;
+    venCdBen.Value:=DMPrincipal.qry.FieldByName('CDBEM').AsString;
+    venDcBem.Value:=DMPrincipal.qry.FieldByName('DCBEM').AsString;
+    venValor.Value:=DMPrincipal.qry.FieldByName('VALOR').AsFloat;
+    venSit.Value:=DMPrincipal.qry.FieldByName('SITUACAO').AsInteger;
+    venDtCon.Value:=DMPrincipal.qry.FieldByName('DTCON').AsDateTime;
+    venNome.Value:=DMPrincipal.qry.FieldByName('NOME').AsString;
+    venDDD.Value:=DMPrincipal.qry.FieldByName('DDD').AsString;
+    venFone.Value:=DMPrincipal.qry.FieldByName('FONE').AsString;
+    venTpPes.Value:=DMPrincipal.qry.FieldByName('TPPES').AsInteger;
+    venCpfCnpj.Value:=DMPrincipal.qry.FieldByName('CPFCNPJ').AsString;
+    venGrupo.Value:=DMPrincipal.qry.FieldByName('GRUPO').AsString;
+    venCota.Value:=DMPrincipal.qry.FieldByName('COTA').AsInteger;
+    venDiaVen.Value:=DMPrincipal.qry.FieldByName('DIAVENC').AsInteger;
+    venVlrPago.Value:=DMPrincipal.qry.FieldByName('VLRPAGO').AsFloat;
+    ven.Post;
+    Result := True;
+  end;
+end;
+
+function TDMVendas.abrirPeriodo(stSql: string): Boolean;
+begin
+  with psqPer do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add(stSql);
+    Open;
+    Result := not EOF;
+  end;
+end;
+
+function TDMVendas.abrirPendenciaComissao(itPsq: Integer; stPesq: String
+  ): Boolean;
+var
+  strSql : string;
+begin
+  strSql:=Format('select V.CDVEN, V.NMEMP, V.CONTRATO, V.GRUPO, V.COTA, V.NMCLI,V.DTVENDA,'+
+          'V.DCBEM, V.VALOR, P.* from PARCELAS P '+
+          'inner join VENDAS_COMPLETAS V on V.CDVEN = P.VENDA '+
+          'where P.RECEBIDO=0 and P.DTVENC <= %s ',
+          [QuotedStr(FormatDateTime('mm/dd/yyyy',Date))]);
+
+  if DMPrincipal.Filial > 0
+  then strSql:=Format('%s and V.CDEMP = %d ',[strSql,DMPrincipal.Filial]);
+
+  if stPesq<>'' then begin
+    case itPsq of
+      0: strSql := Format('%s and V.CDVEN=%d',    // CODIGO
+              [strSql, StrToIntDef(stPesq,0)]);
+      1: strSql := Format('%s and V.NMCLI like %s ',    // NOME CLIENTE
+         [strSql,QuotedStr('%'+stPesq+'%')]);
+      2: strSql := Format('%s and V.CONTRATO like %s ',
+         [strSql,QuotedStr('%'+stPesq+'%')]);
+      3: strSql := Format('%s and V.NMEMP like %s ',
+         [strSql,QuotedStr('%'+stPesq+'%')]);
+    end;
+  end;
+
+  strSql:=Format('%s order by V.NMEMP, V.CDVEN, P.DTVENC, P.PARCELA',[strSql]);
+
+
+  Result := DMPrincipal.AbrirPesquisa(pnd, strSql);
+
+end;
+
+function TDMVendas.abrirPsqVendas(itPsq: Integer; stPesq: String): Boolean;
+var
+  strSql : string;
+begin
+  strSql:='select V.*, E.NOMEFANTASIA NMEMP, A.NOME NMAGE, S.DESCRICAO DCSIT from VENDAS V '+
+          'inner join EMPRESA E on E.CODIGO=V.EMPRESA '+
+          'inner join AGENTES A on A.CODIGO=V.AGENTE '+
+          'inner join SITCON S on S.CODIGO=V.SITUACAO ';
+  if DMPrincipal.Filial > 0
+  then strSql:=Format('%s inner join EQUIPES Q on Q.CODIGO=A.EQUIPE and Q.FILIAL=%d ',
+                          [strSql,DMPrincipal.Filial]);
+  case itPsq of
+    0: strSql := Format('%s  where V.CODIGO=%d',
+              [strSql, StrToIntDef(stPesq,0)]);
+    1: strSql := Format('%s where V.NOME like %s order by V.NOME',
+       [strSql,QuotedStr('%'+stPesq+'%')]);
+    2: strSql := Format('%s where A.NOME like %s order by A.NOME',
+       [strSql,QuotedStr('%'+stPesq+'%')]);
+    3: strSql := Format('%s where V.CONTRATO like %s order by V.CONTRATO',
+       [strSql,QuotedStr('%'+stPesq+'%')]);
+    4: strSql := Format('%s where E.NOMEFANTASIA like %s order by E.NOMEFANTASIA',
+       [strSql,QuotedStr('%'+stPesq+'%')]);
+  end;
+  Result := DMPrincipal.AbrirPesquisa(psqVendas,strSql);
+end;
+
+procedure TDMVendas.imprimirParcelasPendentes;
+begin
+  FrmRelParPend := TFrmRelParPend.Create(nil);
+  try
+     FrmRelParPend.RP.Title:='PARCELAS A RECEBER ATE: '+FormatDateTime('dd/mm/yyyy',Date);
+     FrmRelParPend.RP.PreviewModal;
+  finally
+    FrmRelParPend.Free;
+  end;
+end;
+
+function TDMVendas.abrirProducao(stSql: String): Boolean;
+begin
+  Result := DMPrincipal.AbrirPesquisa(pro, stSql);
+end;
+
+function TDMVendas.abrirResumoPeriodo(per: Integer): Boolean;
+begin
+  with res do begin
+    Close;
+    ParamByName('PER').Value:=per;
+    Open;
+    Result:=not EOF;
+  end;
+end;
+
+function TDMVendas.abrirCancelamentos(ini, fim: TDate): Boolean;
+begin
+  with can do begin
+    Close;
+    ParamByName('ini').Value:=ini;
+    ParamByName('fim').Value:=fim;
+    Open;
+    Result:=not EOF;
+  end;
+end;
+
+function TDMVendas.abrirVendasAgente(agente: Integer): Boolean;
+begin
+  with age do begin
+    Close;
+    ParamByName('ven').Value:=agente;
+    Open;
+    Result:=not EOF;
+  end;
+end;
+
+end.
+
