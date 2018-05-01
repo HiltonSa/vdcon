@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
   Menus, ActnList, ExtCtrls, dataprincipal, formsobre, formgrusu, formusuarios,
-  formtrsenha, formequipes, dateutils;
+  formtrsenha, formequipes;
 
 type
 
@@ -146,7 +146,7 @@ uses util, formagentes, formfiliais, formempresas, formregrascomissao,
   formvendas, formfaixas, formrecautomatico, formcalcularcomissao, datasiacon,
   formselcomissao, formrecmanual, formselparcelaspendentes,
   formselproducaovendas, formpainel, formselresumoperiodo, formselcancelamentos,
-  formselvendasagente;
+  formselvendasagente, formImpSiacon;
 
 {$R *.lfm}
 
@@ -189,11 +189,12 @@ end;
 
 procedure TFrmPrincipal.acImportarExecute(Sender: TObject);
 begin
-  if ConfirmaMensagem('Confirma a importação das Vendas do Siacon?')
-  then begin
-    dmScn.incluirVendasProprias(IncDay(Date,-15));
-    MostraAviso('Fim de importação!');
-  end;
+  DMPrincipal.CriaForm(TFrmImpSiacon,FrmImpSiacon);
+  //if ConfirmaMensagem('Confirma a importação das Vendas do Siacon?')
+  //then begin
+  //  dmScn.incluirVendasProprias(IncDay(Date,-15));
+  //  MostraAviso('Fim de importação!');
+  //end;
 end;
 
 procedure TFrmPrincipal.acPainelExecute(Sender: TObject);

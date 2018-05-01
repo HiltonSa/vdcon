@@ -98,7 +98,7 @@ var
   stSql: String;
 begin
   stSql:='select *  from PERIODO where datediff (day from DTCAL to current_date) '+
-         'between 0 and 30 order by DTINI desc';
+         'between 0 and 35 order by DTINI desc';
 
   //cboPer.Clear;
 

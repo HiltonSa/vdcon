@@ -52,7 +52,8 @@ type
     Pro: TZQuery;
     age: TZQuery;
     par: TZQuery;
-    sia: TZQuery;
+    mov: TZQuery;
+    sia: TZReadOnlyQuery;
     siaCONTRATO: TStringField;
     siaCOTA: TStringField;
     siaDT_VENDA: TDateTimeField;
@@ -65,10 +66,8 @@ type
     siaTELEFONE: TStringField;
     siaVAL_PARC: TFloatField;
     siaVAL_VEND: TFloatField;
-    mov: TZQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure ProAfterScroll(DataSet: TDataSet);
-    procedure siaAfterScroll(DataSet: TDataSet);
   private
     { private declarations }
   public
@@ -134,11 +133,6 @@ end;
 procedure TdmScn.ProAfterScroll(DataSet: TDataSet);
 begin
   abrirParcelas(ProCONTRATO.Value);
-end;
-
-procedure TdmScn.siaAfterScroll(DataSet: TDataSet);
-begin
-  abrirParcelas(siaCONTRATO.AsInteger);
 end;
 
 function TdmScn.abrirSiacon: Boolean;
@@ -310,7 +304,8 @@ var
   dtrec: TDate;
   jaImportado: Boolean;
 begin
-  abrirVendasProprias(dti);
+
+  sia.First;
 
   while not sia.EOF do begin
 
@@ -347,7 +342,8 @@ begin
                                 siaVAL_VEND.Value,
                                 siaVAL_PARC.Value);
 
-      par.First;
+      abrirParcelas(siaCONTRATO.AsInteger);
+
       while not par.EOF do begin
         if DMVendas.acharParcela(1,parCONTRATO.AsString,parPARCELA.Value)
         then begin

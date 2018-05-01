@@ -130,7 +130,7 @@ end;
 
 procedure TFrmCalcularComissao.impExecute(Sender: TObject);
 begin
-  if DMVendas.abrirRelComissoes(perCod.Value) then begin
+  if DMVendas.abrirRelComissoes(perCod.Value,0) then begin
     FrmRelPagarComissao := TFrmRelPagarComissao.Create(nil);
     try
        FrmRelPagarComissao.RP.PreviewModal;

@@ -107,14 +107,12 @@ object FrmFGrUsu: TFrmFGrUsu
     top = 8
     object Gravar: TAction
       Caption = 'Gravar (F2)'
-      Hint = 'Clique para gravar as informações'
       ImageIndex = 4
       OnExecute = GravarExecute
       ShortCut = 113
     end
     object Cancelar: TAction
       Caption = 'Cancelar (Esc)'
-      Hint = 'Clique para cancelar as alterações'
       ImageIndex = 5
       OnExecute = CancelarExecute
     end

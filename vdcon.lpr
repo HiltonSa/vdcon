@@ -17,7 +17,7 @@ uses
   formselparcelaspendentes, formreceberparcela, relproducao,
   formselproducaovendas, formpainel, datapainel, formselresumoperiodo,
   relresumoperiodo, formselcancelamentos, relcancelamentos, formselvendasagente,
-  relvendasagente
+  relvendasagente, formImpSiacon
   { you can add units after this };
 
 {$R *.res}

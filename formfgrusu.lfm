@@ -1,7 +1,7 @@
 object FrmFGrUsu: TFrmFGrUsu
-  Left = 527
+  Left = 489
   Height = 113
-  Top = 245
+  Top = 218
   Width = 275
   ActiveControl = edDesc
   BorderStyle = bsDialog
@@ -16,7 +16,7 @@ object FrmFGrUsu: TFrmFGrUsu
   OnKeyDown = FormKeyDown
   Position = poMainFormCenter
   ShowHint = True
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.2.0'
   object Panel1: TPanel
     Left = 0
     Height = 113

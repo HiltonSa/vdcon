@@ -5,12 +5,14 @@ object dmScn: TdmScn
   HorizontalOffset = 642
   VerticalOffset = 238
   Width = 238
+  PPI = 96
   object Siacon: TZConnection
     ControlsCodePage = cCP_UTF8
     AutoEncodeStrings = False
     Properties.Strings = (
       'AutoEncodeStrings='
     )
+    Connected = True
     Port = 0
     Database = 'SIACON'
     User = 'siacon'
@@ -377,178 +379,6 @@ object dmScn: TdmScn
       Required = False
     end
   end
-  object sia: TZQuery
-    Connection = Siacon
-    AfterScroll = siaAfterScroll
-    SQL.Strings = (
-      'SELECT A.CONTRATO, A.NOME, A.DT_VENDA, A.BEM, B.LIN_MOD, A.GRUPO, A.COTA, A.VAL_VEND, A.REPRES, A.TELEFONE, A.CGC_CPF, A.PESS_F_J, A.VAL_PARC, C.SEQ'
-      ' FROM ACADE A'
-      ' inner join ACBEM b on b.bem=a.bem'
-      ' inner join ACREP R on R.REPRES=A.REPRES'
-      ' inner join ACCLI C on C.CONTRATO=A.CONTRATO'
-      ' WHERE A.D_PRODUC >= :DTI'
-      '       AND A.DT_CANCE = ''01-jan-1801'''
-      ' ORDER BY A.REPRES'
-      ''
-    )
-    Params = <    
-      item
-        DataType = ftDate
-        Name = 'DTI'
-        ParamType = ptInput
-      end>
-    left = 24
-    top = 72
-    ParamData = <    
-      item
-        DataType = ftDate
-        Name = 'DTI'
-        ParamType = ptInput
-      end>
-    object siaCONTRATO: TStringField
-      FieldKind = fkData
-      FieldName = 'CONTRATO'
-      Index = 0
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 36
-    end
-    object siaNOME: TStringField
-      FieldKind = fkData
-      FieldName = 'NOME'
-      Index = 1
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 140
-    end
-    object siaDT_VENDA: TDateTimeField
-      FieldKind = fkData
-      FieldName = 'DT_VENDA'
-      Index = 2
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object siaBEM: TStringField
-      FieldKind = fkData
-      FieldName = 'BEM'
-      Index = 3
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 16
-    end
-    object siaLIN_MOD: TStringField
-      FieldKind = fkData
-      FieldName = 'LIN_MOD'
-      Index = 4
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 60
-    end
-    object siaGRUPO: TStringField
-      FieldKind = fkData
-      FieldName = 'GRUPO'
-      Index = 5
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 16
-    end
-    object siaCOTA: TStringField
-      FieldKind = fkData
-      FieldName = 'COTA'
-      Index = 6
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 12
-    end
-    object siaVAL_VEND: TFloatField
-      FieldKind = fkData
-      FieldName = 'VAL_VEND'
-      Index = 7
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      MaxValue = 0
-      MinValue = 0
-      Precision = 16
-    end
-    object siaREPRES: TStringField
-      FieldKind = fkData
-      FieldName = 'REPRES'
-      Index = 8
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 24
-    end
-    object siaTELEFONE: TStringField
-      FieldKind = fkData
-      FieldName = 'TELEFONE'
-      Index = 9
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 80
-    end
-    object siaCGC_CPF: TStringField
-      FieldKind = fkData
-      FieldName = 'CGC_CPF'
-      Index = 10
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 64
-    end
-    object siaPESS_F_J: TStringField
-      FieldKind = fkData
-      FieldName = 'PESS_F_J'
-      Index = 11
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 4
-    end
-    object siaVAL_PARC: TFloatField
-      FieldKind = fkData
-      FieldName = 'VAL_PARC'
-      Index = 12
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      MaxValue = 0
-      MinValue = 0
-      Precision = 16
-    end
-    object siaSEQ: TStringField
-      FieldKind = fkData
-      FieldName = 'SEQ'
-      Index = 13
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Size = 8
-    end
-  end
   object mov: TZQuery
     Connection = Siacon
     SQL.Strings = (
@@ -631,6 +461,197 @@ object dmScn: TdmScn
       MaxValue = 0
       MinValue = 0
       Precision = 16
+    end
+  end
+  object sia: TZReadOnlyQuery
+    Connection = Siacon
+    SQL.Strings = (
+      'SELECT A.CONTRATO, A.NOME, A.DT_VENDA, A.BEM, B.LIN_MOD, '
+      '            A.GRUPO, A.COTA, A.VAL_VEND, A.REPRES, A.TELEFONE, '
+      '            A.CGC_CPF, A.PESS_F_J, A.VAL_PARC, C.SEQ'
+      ' FROM ACADE A'
+      ' inner join ACBEM b on b.bem=a.bem'
+      ' inner join ACREP R on R.REPRES=A.REPRES'
+      ' inner join ACCLI C on C.CONTRATO=A.CONTRATO'
+      ' WHERE A.D_PRODUC >= :DTI'
+      '       AND A.DT_CANCE = ''01-jan-1801'''
+      ' ORDER BY A.REPRES'
+      ''
+    )
+    Params = <    
+      item
+        DataType = ftDate
+        Name = 'DTI'
+        ParamType = ptInput
+      end>
+    left = 24
+    top = 72
+    ParamData = <    
+      item
+        DataType = ftDate
+        Name = 'DTI'
+        ParamType = ptInput
+      end>
+    object siaCONTRATO: TStringField
+      DisplayLabel = 'Contrato'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CONTRATO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 36
+    end
+    object siaNOME: TStringField
+      DisplayLabel = 'Nome'
+      DisplayWidth = 25
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 140
+    end
+    object siaDT_VENDA: TDateTimeField
+      DisplayLabel = 'Venda'
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'DT_VENDA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = 'dd/mm/yyyy'
+    end
+    object siaLIN_MOD: TStringField
+      DisplayLabel = 'Bem'
+      DisplayWidth = 15
+      FieldKind = fkData
+      FieldName = 'LIN_MOD'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 60
+    end
+    object siaGRUPO: TStringField
+      FieldKind = fkData
+      FieldName = 'GRUPO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Visible = False
+      Size = 16
+    end
+    object siaCOTA: TStringField
+      FieldKind = fkData
+      FieldName = 'COTA'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Visible = False
+      Size = 12
+    end
+    object siaVAL_VEND: TFloatField
+      DisplayLabel = 'Valor'
+      FieldKind = fkData
+      FieldName = 'VAL_VEND'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = ',#0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 16
+    end
+    object siaREPRES: TStringField
+      FieldKind = fkData
+      FieldName = 'REPRES'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Visible = False
+      Size = 24
+    end
+    object siaTELEFONE: TStringField
+      FieldKind = fkData
+      FieldName = 'TELEFONE'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+      Size = 80
+    end
+    object siaPESS_F_J: TStringField
+      FieldKind = fkData
+      FieldName = 'PESS_F_J'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Visible = False
+      Size = 4
+    end
+    object siaVAL_PARC: TFloatField
+      FieldKind = fkData
+      FieldName = 'VAL_PARC'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Visible = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 16
+    end
+    object siaSEQ: TStringField
+      FieldKind = fkData
+      FieldName = 'SEQ'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Visible = False
+      Size = 8
+    end
+    object siaBEM: TStringField
+      FieldKind = fkData
+      FieldName = 'BEM'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 16
+    end
+    object siaCGC_CPF: TStringField
+      FieldKind = fkData
+      FieldName = 'CGC_CPF'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 64
     end
   end
 end

@@ -12,7 +12,7 @@ object FrmCalcularComissao: TFrmCalcularComissao
   OnKeyDown = FormKeyDown
   Position = poMainFormCenter
   ShowHint = True
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.2.0'
   object Panel1: TPanel
     Left = 276
     Height = 166

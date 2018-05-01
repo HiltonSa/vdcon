@@ -404,7 +404,7 @@ begin
     StoredProcName:='PERIODO_ATUAL';
     ExecProc;
     PerCod:=ParamByName('CDPER').AsInteger;
-    PerNom:=ParamByName('DESC').AsString;
+    PerNom:=ParamByName('DCPER').AsString;
   end;
 end;
 

@@ -309,7 +309,9 @@ begin
   end
   else  begin
     Caption:='Incluindo Venda';
-    DMPrincipal.AbrirPesquisa(DMPrincipal.psqEmp, 'select * from EMPRESA where codigo>1 order by NOMEFANTASIA');
+    if DMPrincipal.Filial=0
+    then DMPrincipal.AbrirPesquisa(DMPrincipal.psqEmp, 'select * from EMPRESA order by NOMEFANTASIA')
+    else DMPrincipal.AbrirPesquisa(DMPrincipal.psqEmp, 'select * from EMPRESA where codigo>1 order by NOMEFANTASIA');
     cboPes.ItemIndex:=0;
     venVenda.Value:=Date;
     DMTab.AbrirPesquisa(DMTab.psqSit,'select * from SITCON where CODIGO < 3 order by DESCRICAO');

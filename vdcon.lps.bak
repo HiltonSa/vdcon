@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="66">
+    <Units Count="77">
       <Unit0>
         <Filename Value="vdcon.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -19,10 +19,12 @@
         <ComponentName Value="FrmPrincipal"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="205"/>
-        <CursorPos X="22" Y="222"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="318"/>
+        <CursorPos X="14" Y="328"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="dataprincipal.pas"/>
@@ -30,10 +32,11 @@
         <ComponentName Value="DMPrincipal"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="345"/>
-        <CursorPos Y="363"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="341"/>
+        <CursorPos X="3" Y="343"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="util.pas"/>
@@ -94,7 +97,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="57"/>
+        <TopLine Value="42"/>
         <CursorPos Y="60"/>
         <UsageCount Value="200"/>
       </Unit8>
@@ -190,11 +193,14 @@
         <Filename Value="formfiliais.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFiliais"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="30"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="43"/>
         <CursorPos Y="39"/>
         <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit17>
       <Unit18>
         <Filename Value="formffilial.pas"/>
@@ -202,10 +208,12 @@
         <ComponentName Value="FrmFFilial"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="63"/>
+        <EditorIndex Value="17"/>
+        <TopLine Value="49"/>
         <CursorPos Y="83"/>
         <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit18>
       <Unit19>
         <Filename Value="formequipes.pas"/>
@@ -288,11 +296,12 @@
         <ComponentName Value="DMVendas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="355"/>
         <CursorPos X="3" Y="357"/>
         <UsageCount Value="206"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit26>
       <Unit27>
         <Filename Value="formfvenda.pas"/>
@@ -301,8 +310,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="238"/>
-        <CursorPos X="3" Y="241"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="304"/>
+        <CursorPos X="26" Y="312"/>
         <UsageCount Value="205"/>
       </Unit27>
       <Unit28>
@@ -355,10 +365,11 @@
         <ComponentName Value="FrmRecAutomatico"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="168"/>
-        <CursorPos Y="168"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="140"/>
+        <CursorPos X="20" Y="172"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit32>
       <Unit33>
         <Filename Value="relbaixacomissao.pas"/>
@@ -378,8 +389,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="77"/>
-        <CursorPos X="47" Y="133"/>
+        <TopLine Value="17"/>
+        <CursorPos X="27" Y="101"/>
         <UsageCount Value="201"/>
       </Unit34>
       <Unit35>
@@ -399,11 +410,12 @@
         <ComponentName Value="dmScn"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="294"/>
-        <CursorPos X="3" Y="296"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="115"/>
+        <CursorPos X="75" Y="70"/>
         <UsageCount Value="209"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit36>
       <Unit37>
         <Filename Value="formautor.pas"/>
@@ -503,7 +515,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="173"/>
         <CursorPos Y="208"/>
-        <UsageCount Value="195"/>
+        <UsageCount Value="200"/>
       </Unit45>
       <Unit46>
         <Filename Value="datapainel.pas"/>
@@ -514,7 +526,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="80"/>
         <CursorPos X="11" Y="109"/>
-        <UsageCount Value="188"/>
+        <UsageCount Value="196"/>
       </Unit46>
       <Unit47>
         <Filename Value="formselresumoperiodo.pas"/>
@@ -525,7 +537,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="29"/>
         <CursorPos Y="38"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="126"/>
       </Unit47>
       <Unit48>
         <Filename Value="relresumoperiodo.pas"/>
@@ -536,7 +548,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="61"/>
         <CursorPos Y="80"/>
-        <UsageCount Value="117"/>
+        <UsageCount Value="125"/>
       </Unit48>
       <Unit49>
         <Filename Value="formselcancelamentos.pas"/>
@@ -547,7 +559,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="84"/>
         <CursorPos X="48" Y="94"/>
-        <UsageCount Value="111"/>
+        <UsageCount Value="119"/>
       </Unit49>
       <Unit50>
         <Filename Value="relcancelamentos.pas"/>
@@ -558,7 +570,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="104"/>
         <CursorPos X="3" Y="115"/>
-        <UsageCount Value="109"/>
+        <UsageCount Value="117"/>
       </Unit50>
       <Unit51>
         <Filename Value="formselvendasagente.pas"/>
@@ -569,7 +581,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="89"/>
         <CursorPos X="29" Y="104"/>
-        <UsageCount Value="106"/>
+        <UsageCount Value="114"/>
       </Unit51>
       <Unit52>
         <Filename Value="relvendasagente.pas"/>
@@ -578,139 +590,338 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="80"/>
-        <CursorPos Y="99"/>
-        <UsageCount Value="105"/>
+        <TopLine Value="78"/>
+        <CursorPos Y="88"/>
+        <UsageCount Value="113"/>
       </Unit52>
       <Unit53>
+        <Filename Value="formimpsiacon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmImpSiacon"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="formImpSiacon"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="56"/>
+        <CursorPos X="30" Y="60"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit53>
+      <Unit54>
         <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLReport.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="12746"/>
         <CursorPos Y="12754"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit53>
-      <Unit54>
+      </Unit54>
+      <Unit55>
         <Filename Value="..\..\CompLazarus\zeos\src\dbc\ZDbcInterbase6Utils.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="828"/>
         <CursorPos Y="837"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit54>
-      <Unit55>
+      </Unit55>
+      <Unit56>
         <Filename Value="..\..\CompLazarus\zeos\src\dbc\ZDbcOracleUtils.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="707"/>
         <CursorPos Y="716"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit55>
-      <Unit56>
+      </Unit56>
+      <Unit57>
         <Filename Value="..\..\components\tachart\tageometry.pas"/>
         <UnitName Value="TAGeometry"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="548"/>
         <CursorPos Y="558"/>
-        <UsageCount Value="5"/>
-      </Unit56>
-      <Unit57>
+        <UsageCount Value="4"/>
+      </Unit57>
+      <Unit58>
         <Filename Value="..\..\components\tachart\tadbsource.pas"/>
         <UnitName Value="TADbSource"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="166"/>
         <CursorPos Y="176"/>
-        <UsageCount Value="8"/>
-      </Unit57>
-      <Unit58>
+        <UsageCount Value="7"/>
+      </Unit58>
+      <Unit59>
         <Filename Value="..\..\components\tachart\taseries.pas"/>
         <UnitName Value="TASeries"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1055"/>
         <CursorPos Y="1065"/>
-        <UsageCount Value="3"/>
-      </Unit58>
-      <Unit59>
+        <UsageCount Value="2"/>
+      </Unit59>
+      <Unit60>
         <Filename Value="..\..\components\tachart\tacustomsource.pas"/>
         <UnitName Value="TACustomSource"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="580"/>
         <CursorPos Y="590"/>
-        <UsageCount Value="4"/>
-      </Unit59>
-      <Unit60>
+        <UsageCount Value="3"/>
+      </Unit60>
+      <Unit61>
         <Filename Value="..\..\components\tachart\tamath.pas"/>
         <UnitName Value="TAMath"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="127"/>
         <CursorPos X="3" Y="129"/>
-        <UsageCount Value="4"/>
-      </Unit60>
-      <Unit61>
+        <UsageCount Value="3"/>
+      </Unit61>
+      <Unit62>
         <Filename Value="..\..\components\tachart\tachartutils.pas"/>
         <UnitName Value="TAChartUtils"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="387"/>
         <CursorPos X="3" Y="389"/>
-        <UsageCount Value="4"/>
-      </Unit61>
-      <Unit62>
+        <UsageCount Value="3"/>
+      </Unit62>
+      <Unit63>
         <Filename Value="..\..\lcl\stringhashlist.pas"/>
         <UnitName Value="StringHashList"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="-1"/>
         <TopLine Value="345"/>
         <CursorPos X="31" Y="355"/>
-        <UsageCount Value="10"/>
-      </Unit62>
-      <Unit63>
+        <UsageCount Value="9"/>
+      </Unit63>
+      <Unit64>
         <Filename Value="..\..\components\codetools\basiccodetools.pas"/>
         <UnitName Value="BasicCodeTools"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="32"/>
         <CursorPos X="32" Y="42"/>
-        <UsageCount Value="10"/>
-      </Unit63>
-      <Unit64>
+        <UsageCount Value="9"/>
+      </Unit64>
+      <Unit65>
         <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
         <ComponentName Value="RLPreviewForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
         <TopLine Value="1367"/>
         <CursorPos X="36" Y="1376"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit64>
-      <Unit65>
+      </Unit65>
+      <Unit66>
         <Filename Value="..\..\CompLazarus\richmemo\win32\win32richmemoproc.pas"/>
         <UnitName Value="Win32RichMemoProc"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="-1"/>
         <TopLine Value="246"/>
         <CursorPos X="10" Y="256"/>
-        <UsageCount Value="10"/>
-      </Unit65>
+        <UsageCount Value="9"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="..\..\lcl\include\customform.inc"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="2193"/>
+        <CursorPos Y="2202"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="..\..\lcl\include\containedaction.inc"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="90"/>
+        <CursorPos Y="100"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="..\..\lcl\include\customaction.inc"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="237"/>
+        <CursorPos Y="247"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="..\..\lcl\include\control.inc"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="1561"/>
+        <CursorPos Y="1573"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="..\..\lcl\include\speedbutton.inc"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="908"/>
+        <CursorPos Y="920"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="..\..\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="5388"/>
+        <CursorPos Y="5398"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="..\..\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="110"/>
+        <CursorPos Y="123"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="..\..\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="2663"/>
+        <CursorPos Y="2675"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="..\..\lcl\interfaces\win32\win32object.inc"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="392"/>
+        <CursorPos Y="401"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="..\..\CompLazarus\zeos\src\component\ZAbstractRODataset.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="1871"/>
+        <CursorPos Y="1880"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit76>
     </Units>
-    <JumpHistory Count="4" HistoryIndex="3">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
-        <Caret Line="387" Column="24" TopLine="377"/>
+        <Filename Value="datasiacon.pas"/>
+        <Caret Line="433" TopLine="417"/>
       </Position1>
       <Position2>
-        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
-        <Caret Line="67" Column="80" TopLine="50"/>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="80" TopLine="83"/>
       </Position2>
       <Position3>
-        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
-        <Caret Line="60" Column="31" TopLine="54"/>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="89" TopLine="72"/>
       </Position3>
       <Position4>
-        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
-        <Caret Line="387" Column="20" TopLine="377"/>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="88" TopLine="71"/>
       </Position4>
+      <Position5>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="87" TopLine="70"/>
+      </Position5>
+      <Position6>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="86" TopLine="69"/>
+      </Position6>
+      <Position7>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="85" TopLine="68"/>
+      </Position7>
+      <Position8>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="89" TopLine="72"/>
+      </Position8>
+      <Position9>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="88" TopLine="71"/>
+      </Position9>
+      <Position10>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="87" TopLine="70"/>
+      </Position10>
+      <Position11>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="86" TopLine="69"/>
+      </Position11>
+      <Position12>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="85" TopLine="68"/>
+      </Position12>
+      <Position13>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="91" TopLine="71"/>
+      </Position13>
+      <Position14>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="79" Column="3" TopLine="74"/>
+      </Position14>
+      <Position15>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="83" Column="3" TopLine="78"/>
+      </Position15>
+      <Position16>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="82" Column="3" TopLine="77"/>
+      </Position16>
+      <Position17>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="83" Column="3" TopLine="78"/>
+      </Position17>
+      <Position18>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="82" Column="3" TopLine="77"/>
+      </Position18>
+      <Position19>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="83" Column="3" TopLine="78"/>
+      </Position19>
+      <Position20>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="82" Column="3" TopLine="77"/>
+      </Position20>
+      <Position21>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="37" TopLine="35"/>
+      </Position21>
+      <Position22>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="74" Column="15" TopLine="64"/>
+      </Position22>
+      <Position23>
+        <Filename Value="datasiacon.pas"/>
+        <Caret Line="313" TopLine="302"/>
+      </Position23>
+      <Position24>
+        <Filename Value="formimpsiacon.pas"/>
+        <Caret Line="66" Column="18" TopLine="59"/>
+      </Position24>
+      <Position25>
+        <Filename Value="datasiacon.pas"/>
+        <Caret Line="71" Column="24" TopLine="69"/>
+      </Position25>
+      <Position26>
+        <Filename Value="datasiacon.pas"/>
+        <Caret Line="137" Column="5" TopLine="133"/>
+      </Position26>
+      <Position27>
+        <Filename Value="datasiacon.pas"/>
+        <Caret Line="71" TopLine="52"/>
+      </Position27>
+      <Position28>
+        <Filename Value="datasiacon.pas"/>
+        <Caret Line="70" TopLine="51"/>
+      </Position28>
+      <Position29>
+        <Filename Value="datasiacon.pas"/>
+        <Caret Line="69" TopLine="50"/>
+      </Position29>
+      <Position30>
+        <Filename Value="datasiacon.pas"/>
+        <Caret Line="70" TopLine="51"/>
+      </Position30>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

@@ -1,0 +1,94 @@
+unit formImpSiacon;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, DateTimePicker, Forms, Controls, Graphics,
+  Dialogs, ActnList, ExtCtrls, StdCtrls, DbCtrls, Buttons, ComCtrls, DBGrids,
+  dateutils, db;
+
+type
+
+  { TFrmImpSiacon }
+
+  TFrmImpSiacon = class(TForm)
+    dtImpSiacon: TDateTimePicker;
+    grPesq: TDBGrid;
+    Label1: TLabel;
+    nvPesq: TDBNavigator;
+    Panel2: TPanel;
+    Panel4: TPanel;
+    pesq: TAction;
+    AL: TActionList;
+    Cancelar: TAction;
+    ds: TDataSource;
+    Gravar: TAction;
+    Panel1: TPanel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    stBar: TStatusBar;
+    procedure CancelarExecute(Sender: TObject);
+    procedure dsStateChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure GravarExecute(Sender: TObject);
+    procedure pesqExecute(Sender: TObject);
+  private
+
+  public
+
+  end;
+
+var
+  FrmImpSiacon: TFrmImpSiacon;
+
+implementation
+
+uses datasiacon, util;
+
+{$R *.lfm}
+
+{ TFrmImpSiacon }
+
+
+procedure TFrmImpSiacon.pesqExecute(Sender: TObject);
+begin
+  if dmScn.abrirVendasProprias(dtImpSiacon.Date)
+  then stBar.SimpleText:=Format('%d vendas encontradas!',[ds.DataSet.RecordCount])
+  else stBar.SimpleText:='Vendas não encontradas!';
+end;
+
+procedure TFrmImpSiacon.FormCreate(Sender: TObject);
+begin
+  dtImpSiacon.Date:=IncDay(Date,-15);
+end;
+
+procedure TFrmImpSiacon.GravarExecute(Sender: TObject);
+begin
+  if ConfirmaMensagem('Confirma a importação das Vendas do Siacon?')
+  then begin
+    dmScn.incluirVendasProprias(dtImpSiacon.Date);
+    MostraAviso('Fim de importação!');
+    Close;
+  end;
+
+end;
+
+
+procedure TFrmImpSiacon.CancelarExecute(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TFrmImpSiacon.dsStateChange(Sender: TObject);
+begin
+  Gravar.Enabled:=False;
+  if ds.DataSet.Active then
+  Gravar.Enabled:=ds.DataSet.RecordCount > 0;
+end;
+
+
+end.
+

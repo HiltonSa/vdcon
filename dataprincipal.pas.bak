@@ -129,6 +129,7 @@ type
     procedure VerificarRotinas(Frm: TForm);
     procedure IncluirRotinas(modo,GrUsu: Integer);
     function CriaForm(frmClass: TFormClass; out Obj): TModalResult;
+    procedure CriaFormFilho(frmClass: TFormClass; out Obj);
     procedure SetUsu;
     procedure SetComp;
     procedure SetPeriodo;
@@ -341,12 +342,24 @@ function TDMPrincipal.CriaForm(frmClass: TFormClass; out Obj): TModalResult;
 begin
   try
      TForm(Obj) := frmClass.Create(Self);
-     TForm(Obj).FormStyle:=fsMDIChild;
      VerificarRotinas(TForm(Obj));
      AplicarRestricoes(TForm(Obj));
-     Result := TForm(Obj).Show;
+     Result := TForm(Obj).ShowModal;
   finally
          FreeAndNil(Obj);
+  end;
+end;
+
+procedure TDMPrincipal.CriaFormFilho(frmClass: TFormClass; out Obj);
+begin
+  try
+     TForm(Obj) := frmClass.Create(Self);
+     VerificarRotinas(TForm(Obj));
+     AplicarRestricoes(TForm(Obj));
+     TForm(Obj).Show;
+
+  finally
+    FreeAndNil(Obj);
   end;
 end;
 
