@@ -1,0 +1,63 @@
+unit vdcon.controller.botaoalterar;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, Sysutils, Controls, vdcon.controller.interfaces;
+
+type
+
+  { TControllerBotaoAlterar }
+
+  TControllerBotaoAlterar = class(TInterfacedObject, iControllerBotaoAcao)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New: iControllerBotaoAcao;
+      function Show: TObject;
+      procedure Clique(Sender: TObject);
+
+  end;
+
+implementation
+
+uses vdcon.controller.botaopadrao.factory;
+
+{ TControllerBotaoAlterar }
+
+constructor TcontrollerbotaoAlterar.Create;
+begin
+
+end;
+
+destructor TcontrollerbotaoAlterar.Destroy;
+begin
+  inherited Destroy;
+end;
+
+class function TcontrollerbotaoAlterar.New: iControllerBotaoAcao;
+begin
+  Result := Self.Create;
+end;
+
+function TcontrollerbotaoAlterar.Show: Tobject;
+begin
+  Result := TControllerBotaoPadraoFactory.New
+               .Padrao
+               .Name('btnAlterar')
+               .onClick(@Clique)
+               .Caption('Alterar')
+               .Imagem('pen')
+               .Item;
+end;
+
+procedure TcontrollerbotaoAlterar.Clique(Sender: Tobject);
+begin
+
+end;
+
+end.
+

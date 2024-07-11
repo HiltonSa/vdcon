@@ -1,0 +1,120 @@
+unit formselresumoperiodo;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, BufDataset, db, FileUtil, DateTimePicker, Forms, Controls,
+  Graphics, Dialogs, ActnList, ExtCtrls, Buttons, StdCtrls, DbCtrls, LCLType;
+
+type
+
+  { TFrmSelResumoPeriodo }
+
+  TFrmSelResumoPeriodo = class(TForm)
+    AL: TActionList;
+    cboPer: TComboBox;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    ds: TDataSource;
+    Fechar: TAction;
+    imp: TAction;
+    Label1: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Panel1: TPanel;
+    Panel3: TPanel;
+    per: TBufDataset;
+    perCal: TDateField;
+    perCod: TLongintField;
+    perDes: TStringField;
+    perFim: TDateField;
+    perIni: TDateField;
+    SpeedButton4: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    procedure cboPerSelect(Sender: TObject);
+    procedure FecharExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure impExecute(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  FrmSelResumoPeriodo: TFrmSelResumoPeriodo;
+
+implementation
+
+uses dataprincipal, datatabelas, datavendas, vdcon.controller.util, relresumoperiodo;
+
+{$R *.lfm}
+
+{ TFrmSelResumoPeriodo }
+
+procedure TFrmSelResumoPeriodo.FormClose(Sender: TObject;
+  var CloseAction: TCloseAction);
+begin
+  DMTab.psqPer.Close;
+  DMVendas.res.Close;
+end;
+
+procedure TFrmSelResumoPeriodo.FecharExecute(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TFrmSelResumoPeriodo.cboPerSelect(Sender: TObject);
+begin
+  DMTab.psqPer.Locate('codigo',StrToInt(Copy(cboPer.Text,201,4)),[]);
+  if per.Active
+  then per.Close;
+  per.CreateDataset;
+  per.Append;
+  perCod.Value:=DMTab.psqPerCODIGO.Value;
+  perCal.Value:=DMTab.psqPerDTCAL.Value;
+  perDes.Value:=DMTab.psqPerDESCRICAO.Value;
+  perFim.Value:=DMTab.psqPerDTFIM.Value;
+  perIni.Value:=DMTab.psqPerDTINI.Value;
+  per.Post;
+end;
+
+procedure TFrmSelResumoPeriodo.FormCreate(Sender: TObject);
+begin
+  if DMTab.AbrirPesquisa(DMTab.psqPer,'select * from PERIODO order by DTINI desc')
+  then montarComboBox(cboPer,DMTab.psqPer,'CODIGO','DESCRICAO',False);
+end;
+
+procedure TFrmSelResumoPeriodo.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+    case Key of
+    VK_RETURN: SelectNext(ActiveControl,True,True);
+    VK_ESCAPE: Fechar.Execute;
+  end;
+end;
+
+procedure TFrmSelResumoPeriodo.impExecute(Sender: TObject);
+begin
+  if DMVendas.abrirResumoPeriodo(perCod.Value) then begin
+     FrmRelResumoPeriodo := TFrmRelResumoPeriodo.Create(nil);
+     try
+        FrmRelResumoPeriodo.RP.Title:=Format('RESUMO DO PERIODO %s - %s a %s',
+                      [Trim(perDes.Value), DateToStr(perIni.Value),
+                       DateToStr(perFim.Value)]);
+        FrmRelResumoPeriodo.RP.PreviewModal;
+     finally
+       FrmRelResumoPeriodo.Free;
+     end;
+  end
+  else MostraAviso('Vendas não encontradas!');
+end;
+
+end.
+

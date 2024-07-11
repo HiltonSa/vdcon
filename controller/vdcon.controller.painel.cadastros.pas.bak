@@ -1,0 +1,59 @@
+unit vdcon.controller.painel.cadastros;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, Sysutils, vdcon.controller.interfaces;
+
+type
+
+  { TControllerPainelCadastros }
+
+  TControllerPainelCadastros = class (TInterfacedObject, iControllerPainelMenu )
+    private
+      FContainer: TComponent;
+    public
+      constructor Create(Container: TComponent);
+      destructor Destroy; override;
+      class function New(Container: TComponent): iControllerPainelMenu;
+      procedure Exibir;
+  end;
+
+implementation
+
+uses vdcon.controller.botaopadrao.factory, vdcon.controller.painel.factory;
+
+{ TControllerPainelCadastros }
+
+constructor TcontrollerpainelCadastros.Create(Container: Tcomponent);
+begin
+  FContainer := Container;
+end;
+
+destructor TcontrollerpainelCadastros.Destroy;
+begin
+  inherited Destroy;
+end;
+
+class function TcontrollerpainelCadastros.New(Container: Tcomponent): Icontrollerpainelmenu;
+begin
+  Result := Self.Create(Container);
+end;
+
+procedure TcontrollerpainelCadastros.Exibir;
+begin
+  TControllerPainelFactory.New
+      .Menu(FContainer)
+      .Name('mnPrincipal')
+      .AddOpcao(TControllerBotaoPadraoFactory.New.Apoio.Show)
+      .AddOpcao(TControllerBotaoPadraoFactory.New.Relatorios.Show)
+      .AddOpcao(TControllerBotaoPadraoFactory.New.Operacoes.Show)
+      .AddOpcao(TControllerBotaoPadraoFactory.New.Cadastro.Show)
+      .AddOpcao(TControllerBotaoPadraoFactory.New.Sair.Show)
+      .Exibir;
+end;
+
+end.
+

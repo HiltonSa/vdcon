@@ -2,424 +2,1753 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="10"/>
+    <Version Value="12"/>
     <BuildModes Active="Default"/>
-    <Units Count="77">
+    <Units Count="247">
       <Unit0>
         <Filename Value="vdcon.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="21"/>
-        <CursorPos Y="40"/>
+        <TopLine Value="23"/>
+        <CursorPos X="56" Y="29"/>
         <UsageCount Value="201"/>
       </Unit0>
       <Unit1>
-        <Filename Value="formprincipal.pas"/>
+        <Filename Value="view\vdcon.view.principal.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="FrmPrincipal"/>
+        <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="318"/>
-        <CursorPos X="14" Y="328"/>
-        <UsageCount Value="201"/>
+        <TopLine Value="67"/>
+        <CursorPos X="6" Y="80"/>
+        <UsageCount Value="200"/>
       </Unit1>
       <Unit2>
-        <Filename Value="dataprincipal.pas"/>
+        <Filename Value="model\entidades\usuarios\vdcon.model.entidades.usuarios.rotinas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="202"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="model\entidades\usuarios\vdcon.model.entidades.grupousuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="202"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="model\entidades\usuarios\vdcon.model.entidades.itemgrupousuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="vdcon.model.entidades.itensgrupousuarios"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="202"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="model\entidades\usuarios\vdcon.model.entidades.usuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="114"/>
+        <CursorPos Y="128"/>
+        <UsageCount Value="202"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="model\entidades\usuarios\vdcon.model.entidades.usuarios.formularios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="202"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="model\entidades\organizacao\vdcon.model.entidades.organizacao.empresa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="50" Y="14"/>
+        <UsageCount Value="202"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="model\entidades\organizacao\vdcon.model.entidades.organizacao.supervisao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="202"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="model\entidades\organizacao\vdcon.model.entidades.organizacao.equipe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="202"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="model\entidades\organizacao\vdcon.model.entidades.organizacao.filial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="202"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="model\entidades\organizacao\vdcon.model.entidades.organizacao.situacaovenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="202"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="model\entidades\venda\vdcon.model.entidades.venda.periodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="25" Y="37"/>
+        <UsageCount Value="202"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="model\entidades\organizacao\vdcon.model.entidades.organizacao.agente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="201"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="model\entidades\venda\vdcon.model.entidades.venda.faixacomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos X="27" Y="113"/>
+        <UsageCount Value="201"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="model\entidades\venda\vdcon.model.entidades.venda.regra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="29"/>
+        <CursorPos X="26" Y="37"/>
+        <UsageCount Value="201"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="model\entidades\venda\vdcon.model.entidades.venda.parcelacomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="8"/>
+        <UsageCount Value="201"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="model\entidades\venda\vdcon.model.entidades.venda.vendaconsorcio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="71"/>
+        <CursorPos X="26" Y="82"/>
+        <UsageCount Value="201"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="model\datapainel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmPainel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos X="64" Y="11"/>
+        <UsageCount Value="200"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="model\dataprincipal.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DMPrincipal"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="341"/>
-        <CursorPos X="3" Y="343"/>
-        <UsageCount Value="201"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="util.pas"/>
+        <TopLine Value="499"/>
+        <CursorPos X="75" Y="574"/>
+        <UsageCount Value="200"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="model\datasiacon.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="dmScn"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="81"/>
+        <CursorPos X="48" Y="92"/>
+        <UsageCount Value="200"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="model\datatabelas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMTab"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="42" Y="8"/>
+        <UsageCount Value="200"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="model\datavendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="262"/>
+        <CursorPos X="60" Y="273"/>
+        <UsageCount Value="200"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="view\formagentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAgentes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="120"/>
+        <CursorPos X="57" Y="53"/>
+        <UsageCount Value="200"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="view\formautor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAutor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="200"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="view\formcalcularcomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCalcularComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="95"/>
+        <CursorPos X="37" Y="107"/>
+        <UsageCount Value="200"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="view\vdcon.view.empresas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmEmpresas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="70" Y="53"/>
+        <UsageCount Value="200"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="view\formequipes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmEquipes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="48"/>
+        <CursorPos X="63" Y="57"/>
+        <UsageCount Value="200"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="view\formexcgrusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmExcGrUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="42"/>
+        <CursorPos X="42" Y="53"/>
+        <UsageCount Value="200"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="view\formfagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFAgente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="60"/>
+        <CursorPos X="60" Y="72"/>
+        <UsageCount Value="200"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="view\formfaixas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFaixas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <CursorPos X="54" Y="54"/>
+        <UsageCount Value="200"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="view\vdcon.view.fichaempresas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFEmpresa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="152"/>
+        <CursorPos X="37" Y="31"/>
+        <UsageCount Value="200"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="view\formfequipe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFEquipe"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="46"/>
+        <CursorPos X="40" Y="57"/>
+        <UsageCount Value="200"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="view\formffaixa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFFaixa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="42" Y="55"/>
+        <UsageCount Value="200"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="view\formffilial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFFilial"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="55" Y="56"/>
+        <UsageCount Value="200"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="view\formfgrusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFGrUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="42" Y="49"/>
+        <UsageCount Value="200"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="view\formfiliais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFiliais"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos X="69" Y="58"/>
+        <UsageCount Value="200"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="view\formfparcela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFParcela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="56"/>
+        <CursorPos X="54" Y="67"/>
+        <UsageCount Value="200"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="view\formfregra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFRegra"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="56"/>
+        <CursorPos X="42" Y="67"/>
+        <UsageCount Value="200"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="view\formfusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="62"/>
+        <CursorPos X="42" Y="73"/>
+        <UsageCount Value="200"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="view\formfvenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFVenda"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="99"/>
+        <CursorPos X="67" Y="110"/>
+        <UsageCount Value="200"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="view\formgrusu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmGrUsu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="68" Y="55"/>
+        <UsageCount Value="200"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="view\formimpsiacon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmImpSiacon"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="formImpSiacon"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="39" Y="49"/>
+        <UsageCount Value="200"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="view\vdcon.view.login.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="49" Y="13"/>
+        <UsageCount Value="200"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="view\vdcon.view.mensagens.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMsg"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="58" Y="36"/>
+        <UsageCount Value="200"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="view\formpainel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmPainel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="80"/>
+        <CursorPos X="54" Y="91"/>
+        <UsageCount Value="200"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="view\formparcelas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmParcelas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="71" Y="9"/>
+        <UsageCount Value="200"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="view\formprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="101"/>
+        <CursorPos X="57" Y="84"/>
+        <UsageCount Value="200"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="view\formrecautomatico.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRecAutomatico"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="57"/>
+        <CursorPos X="42" Y="68"/>
+        <UsageCount Value="200"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="view\formreceberparcela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmReceberParcela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="48"/>
+        <CursorPos X="54" Y="59"/>
+        <UsageCount Value="200"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="view\formrecmanual.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRecManual"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="24" Y="60"/>
+        <UsageCount Value="200"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="view\formregrascomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRgCom"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="40" Y="60"/>
+        <UsageCount Value="200"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="view\formrotgru.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRotGru"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="54"/>
+        <CursorPos X="42" Y="65"/>
+        <UsageCount Value="200"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="view\formselcancelamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelCancelamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="54" Y="45"/>
+        <UsageCount Value="200"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="view\formselcomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos X="42" Y="58"/>
+        <UsageCount Value="200"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="view\formselparcelaspendentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelParcelasPendentes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="30"/>
+        <CursorPos X="54" Y="41"/>
+        <UsageCount Value="200"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="view\formselproducaovendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelProdVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="54" Y="56"/>
+        <UsageCount Value="200"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="view\formselresumoperiodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelResumoPeriodo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="67" Y="55"/>
+        <UsageCount Value="200"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="view\formselvendasagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelVendasAgente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos X="59" Y="36"/>
+        <UsageCount Value="200"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="view\formsobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSobre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="200"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="view\formtrsenha.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmTrSenha"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="42" Y="49"/>
+        <UsageCount Value="200"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="view\formusuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmUsuarios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="43" Y="10"/>
+        <UsageCount Value="200"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="view\formvendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="51"/>
+        <CursorPos X="27" Y="62"/>
+        <UsageCount Value="200"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="controller\vdcon.controller.util.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="316"/>
+        <CursorPos X="3" Y="318"/>
+        <UsageCount Value="200"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="view\relatorio\relbaixacomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelBaixaComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos Y="51"/>
+        <UsageCount Value="200"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="view\relatorio\relcancelamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelCancelamentos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="200"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="view\relatorio\relpagarcomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelPagarComissao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="200"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="view\relatorio\relparcelaspendentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelParPend"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="200"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="view\relatorio\relproducao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelProducao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="200"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="view\relatorio\relresumoperiodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelResumoPeriodo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="200"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="view\relatorio\relvendasagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmRelVendasAgente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="200"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="model\conexao\vdcon.model.conexao.zeos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="33"/>
+        <CursorPos Y="53"/>
+        <UsageCount Value="201"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="model\conexao\vdcon.model.conexao.dataset.zeos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="66"/>
+        <CursorPos X="39" Y="79"/>
+        <UsageCount Value="211"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="model\vdcon.model.interfaces.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <UsageCount Value="211"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="model\dao\vdcon.model.dao.interfaces.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos X="14" Y="20"/>
+        <UsageCount Value="209"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="model\dao\vdcon.model.dao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="3" Y="12"/>
+        <UsageCount Value="209"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="controller\vdcon.controller.interfaces.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="22"/>
+        <CursorPos Y="36"/>
+        <UsageCount Value="203"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="controller\vdcon.controller.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="33"/>
+        <CursorPos X="3" Y="16"/>
+        <UsageCount Value="202"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="model\vdcon.model.usuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos X="24" Y="45"/>
+        <UsageCount Value="203"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="model\sql\vdcon.model.sql.interfaces.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="21"/>
+        <CursorPos X="24" Y="26"/>
+        <UsageCount Value="200"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="model\sql\vdcon.model.sql.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="152"/>
+        <CursorPos X="19" Y="166"/>
+        <UsageCount Value="200"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="model\conexao\vdcon.model.conexao.factory.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="23"/>
+        <CursorPos Y="44"/>
+        <UsageCount Value="200"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="model\conexao\vdcon.model.conexao.factory.dataset.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9"/>
+        <CursorPos X="24" Y="38"/>
+        <UsageCount Value="200"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="model\conexao\vdcon.model.conexao.parametrosconexao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos Y="56"/>
+        <UsageCount Value="201"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="controller\vdcon.controller.ambiente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos Y="189"/>
+        <UsageCount Value="201"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="model\entidades\usuarios\vdcon.model.entidades.estacoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="55"/>
+        <CursorPos X="56" Y="60"/>
+        <UsageCount Value="204"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="model\entidades\usuarios\vdcon.model.entidades.sessoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="81"/>
+        <CursorPos Y="95"/>
+        <UsageCount Value="204"/>
+      </Unit86>
+      <Unit87>
+        <Filename Value="controller\vdcon.controller.usuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="75"/>
+        <CursorPos X="5" Y="24"/>
+        <UsageCount Value="200"/>
+      </Unit87>
+      <Unit88>
+        <Filename Value="view\vdcon.view.interfaces.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="14"/>
+        <UsageCount Value="216"/>
+      </Unit88>
+      <Unit89>
+        <Filename Value="view\vdcon.view.formularios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos X="40" Y="19"/>
+        <UsageCount Value="216"/>
+      </Unit89>
+      <Unit90>
+        <Filename Value="controller\vdcon.controller.formularios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="79"/>
+        <CursorPos Y="94"/>
+        <UsageCount Value="216"/>
+      </Unit90>
+      <Unit91>
+        <Filename Value="controller\painel\vdcon.controller.botaoagentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos Y="62"/>
+        <UsageCount Value="149"/>
+      </Unit91>
+      <Unit92>
+        <Filename Value="controller\painel\vdcon.controller.botaoapoio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="46"/>
+        <CursorPos X="75" Y="66"/>
+        <UsageCount Value="149"/>
+      </Unit92>
+      <Unit93>
+        <Filename Value="controller\painel\vdcon.controller.botaocadastro.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="46"/>
+        <CursorPos Y="63"/>
+        <UsageCount Value="149"/>
+      </Unit93>
+      <Unit94>
+        <Filename Value="controller\painel\vdcon.controller.botaocalculocomissoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit94>
+      <Unit95>
+        <Filename Value="controller\painel\vdcon.controller.botaocancelamentosperiodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit95>
+      <Unit96>
+        <Filename Value="controller\painel\vdcon.controller.botaocomissoesperiodo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit96>
+      <Unit97>
+        <Filename Value="controller\painel\vdcon.controller.botaoempresa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos Y="68"/>
+        <UsageCount Value="149"/>
+      </Unit97>
+      <Unit98>
+        <Filename Value="controller\painel\vdcon.controller.botaoequipes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="38" Y="46"/>
+        <UsageCount Value="149"/>
+      </Unit98>
+      <Unit99>
+        <Filename Value="controller\painel\vdcon.controller.botaofaixascomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12"/>
+        <CursorPos X="11" Y="16"/>
+        <UsageCount Value="149"/>
+      </Unit99>
+      <Unit100>
+        <Filename Value="controller\painel\vdcon.controller.botaofiliais.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit100>
+      <Unit101>
+        <Filename Value="controller\painel\vdcon.controller.botaogrupousuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit101>
+      <Unit102>
+        <Filename Value="controller\painel\vdcon.controller.botaoimportarsiacon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit102>
+      <Unit103>
+        <Filename Value="controller\painel\vdcon.controller.botaooperacoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos X="79" Y="66"/>
+        <UsageCount Value="149"/>
+      </Unit103>
+      <Unit104>
+        <Filename Value="controller\painel\vdcon.controller.botaopadrao.factory.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="144"/>
+        <CursorPos X="32" Y="159"/>
+        <UsageCount Value="149"/>
+      </Unit104>
+      <Unit105>
+        <Filename Value="controller\painel\vdcon.controller.botaopadrao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="17"/>
+        <CursorPos X="43" Y="26"/>
+        <UsageCount Value="149"/>
+      </Unit105>
+      <Unit106>
+        <Filename Value="controller\painel\vdcon.controller.botaoparcelaspendentes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit106>
+      <Unit107>
+        <Filename Value="controller\painel\vdcon.controller.botaoproducaovendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="18"/>
+        <UsageCount Value="149"/>
+      </Unit107>
+      <Unit108>
+        <Filename Value="controller\painel\vdcon.controller.botaorecebimentoautomatico.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit108>
+      <Unit109>
+        <Filename Value="controller\painel\vdcon.controller.botaorecebimentomanual.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit109>
+      <Unit110>
+        <Filename Value="controller\painel\vdcon.controller.botaoregrascomissao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit110>
+      <Unit111>
+        <Filename Value="controller\painel\vdcon.controller.botaorelatorios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="79" Y="66"/>
+        <UsageCount Value="149"/>
+      </Unit111>
+      <Unit112>
+        <Filename Value="controller\painel\vdcon.controller.botaoresumovendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="vdcon.controller.botaoResumoVendas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit112>
+      <Unit113>
+        <Filename Value="controller\painel\vdcon.controller.botaosair.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos X="62" Y="41"/>
+        <UsageCount Value="149"/>
+      </Unit113>
+      <Unit114>
+        <Filename Value="controller\painel\vdcon.controller.botaosobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit114>
+      <Unit115>
+        <Filename Value="controller\painel\vdcon.controller.botaotrocarsenha.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit115>
+      <Unit116>
+        <Filename Value="controller\painel\vdcon.controller.botaotrocarusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit116>
+      <Unit117>
+        <Filename Value="controller\painel\vdcon.controller.botaousuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos Y="16"/>
+        <UsageCount Value="149"/>
+      </Unit117>
+      <Unit118>
+        <Filename Value="controller\painel\vdcon.controller.botaovendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit118>
+      <Unit119>
+        <Filename Value="controller\painel\vdcon.controller.botaovendasagente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="149"/>
+      </Unit119>
+      <Unit120>
+        <Filename Value="controller\painel\vdcon.controller.botaovoltar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <CursorPos Y="52"/>
+        <UsageCount Value="149"/>
+      </Unit120>
+      <Unit121>
+        <Filename Value="controller\vdcon.controller.entidade.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <CursorPos X="3" Y="17"/>
+        <UsageCount Value="203"/>
+      </Unit121>
+      <Unit122>
+        <Filename Value="controller\painel\vdcon.controller.painel.apoio.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="39"/>
+        <CursorPos Y="63"/>
+        <UsageCount Value="149"/>
+      </Unit122>
+      <Unit123>
+        <Filename Value="controller\painel\vdcon.controller.painel.cadastros.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos Y="50"/>
+        <UsageCount Value="149"/>
+      </Unit123>
+      <Unit124>
+        <Filename Value="controller\painel\vdcon.controller.painel.factory.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="62"/>
+        <CursorPos X="38" Y="84"/>
+        <UsageCount Value="149"/>
+      </Unit124>
+      <Unit125>
+        <Filename Value="controller\painel\vdcon.controller.painel.operacoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos Y="50"/>
+        <UsageCount Value="149"/>
+      </Unit125>
+      <Unit126>
+        <Filename Value="controller\painel\vdcon.controller.painel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos Y="58"/>
+        <UsageCount Value="149"/>
+      </Unit126>
+      <Unit127>
+        <Filename Value="controller\painel\vdcon.controller.painel.principal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="33"/>
+        <CursorPos Y="47"/>
+        <UsageCount Value="149"/>
+      </Unit127>
+      <Unit128>
+        <Filename Value="controller\painel\vdcon.controller.painel.relatorios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos Y="50"/>
+        <UsageCount Value="149"/>
+      </Unit128>
+      <Unit129>
+        <Filename Value="controller\vdcon.controller.empresas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="61"/>
+        <CursorPos X="41" Y="90"/>
+        <UsageCount Value="128"/>
+      </Unit129>
+      <Unit130>
+        <Filename Value="controller\vdcon.controller.frames.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <CursorPos Y="70"/>
+        <UsageCount Value="113"/>
+      </Unit130>
+      <Unit131>
+        <Filename Value="controller\painel\vdcon.controller.botaoalterar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="49" Y="8"/>
+        <UsageCount Value="83"/>
+      </Unit131>
+      <Unit132>
+        <Filename Value="controller\painel\vdcon.controller.botaoincluir.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12"/>
+        <CursorPos X="49" Y="18"/>
+        <UsageCount Value="83"/>
+      </Unit132>
+      <Unit133>
+        <Filename Value="controller\painel\vdcon.controller.botaopesquisar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="21"/>
+        <UsageCount Value="83"/>
+      </Unit133>
+      <Unit134>
+        <Filename Value="controller\painel\vdcon.controller.botaofechar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <CursorPos Y="67"/>
+        <UsageCount Value="83"/>
+      </Unit134>
+      <Unit135>
+        <Filename Value="controller\painel\vdcon.controller.botaoexcluir.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="23"/>
+        <CursorPos X="32" Y="50"/>
+        <UsageCount Value="83"/>
+      </Unit135>
+      <Unit136>
+        <Filename Value="controller\painel\vdcon.controller.painel.menucrud.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos Y="57"/>
+        <UsageCount Value="82"/>
+      </Unit136>
+      <Unit137>
+        <Filename Value="controller\painel\vdcon.controller.botaogravar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos Y="51"/>
+        <UsageCount Value="78"/>
+      </Unit137>
+      <Unit138>
+        <Filename Value="controller\painel\vdcon.controller.botaocancelar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="54"/>
+        <UsageCount Value="78"/>
+      </Unit138>
+      <Unit139>
+        <Filename Value="controller\vdcon.controller.faixas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="30" Y="81"/>
+        <UsageCount Value="57"/>
+      </Unit139>
+      <Unit140>
+        <Filename Value="view\frames\vdcon.view.frames.empresas.pas"/>
+        <ComponentName Value="FrameEmpresas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos X="60" Y="13"/>
+        <UsageCount Value="71"/>
+      </Unit140>
+      <Unit141>
+        <Filename Value="controller\vdcon.controller.painel.factory.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="22"/>
+        <CursorPos X="40" Y="78"/>
+        <UsageCount Value="63"/>
+      </Unit141>
+      <Unit142>
+        <Filename Value="controller\vdcon.controller.painel.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="21"/>
+        <CursorPos X="35" Y="30"/>
+        <UsageCount Value="63"/>
+      </Unit142>
+      <Unit143>
+        <Filename Value="controller\vdcon.controller.painel.apoio.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="56" Y="50"/>
+        <UsageCount Value="45"/>
+      </Unit143>
+      <Unit144>
+        <Filename Value="controller\vdcon.controller.painel.principal.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos Y="59"/>
+        <UsageCount Value="16"/>
+      </Unit144>
+      <Unit145>
+        <Filename Value="controller\vdcon.controller.painel.cadastros.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="39"/>
+        <CursorPos X="58" Y="55"/>
+        <UsageCount Value="11"/>
+      </Unit145>
+      <Unit146>
+        <Filename Value="controller\vdcon.controller.painel.relatorios.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="62" Y="46"/>
+        <UsageCount Value="11"/>
+      </Unit146>
+      <Unit147>
+        <Filename Value="controller\vdcon.controller.painel.operacoes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos Y="54"/>
+        <UsageCount Value="11"/>
+      </Unit147>
+      <Unit148>
+        <Filename Value="controller\painel\vdcon.controller.entidade.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="8"/>
+      </Unit148>
+      <Unit149>
+        <Filename Value="controller\vdcon.controller.botaopadrao.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos X="42" Y="42"/>
+        <UsageCount Value="63"/>
+      </Unit149>
+      <Unit150>
+        <Filename Value="controller\vdcon.controller.botaopadrao.factory.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="92"/>
+        <CursorPos X="34" Y="114"/>
+        <UsageCount Value="63"/>
+      </Unit150>
+      <Unit151>
+        <Filename Value="controller\vdcon.controller.botaousuario.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos X="54" Y="52"/>
+        <UsageCount Value="47"/>
+      </Unit151>
+      <Unit152>
+        <Filename Value="controller\vdcon.controller.botaovoltar.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="39"/>
+        <CursorPos X="54" Y="54"/>
+        <UsageCount Value="26"/>
+      </Unit152>
+      <Unit153>
+        <Filename Value="model\sql\vdcon.model.rtti.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="63"/>
+        <CursorPos X="13" Y="74"/>
+        <UsageCount Value="1"/>
+      </Unit153>
+      <Unit154>
+        <Filename Value="formprincipal.pas"/>
+        <ComponentName Value="FrmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="334"/>
+        <CursorPos X="3" Y="316"/>
+        <UsageCount Value="157"/>
+      </Unit154>
+      <Unit155>
+        <Filename Value="dataprincipal.pas"/>
+        <ComponentName Value="DMPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="443"/>
+        <CursorPos X="3" Y="450"/>
+        <UsageCount Value="157"/>
+      </Unit155>
+      <Unit156>
+        <Filename Value="util.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="246"/>
         <CursorPos X="3" Y="249"/>
-        <UsageCount Value="200"/>
-      </Unit3>
-      <Unit4>
+        <UsageCount Value="156"/>
+      </Unit156>
+      <Unit157>
         <Filename Value="formmsg.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmMsg"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="4"/>
         <CursorPos X="22" Y="9"/>
-        <UsageCount Value="200"/>
-      </Unit4>
-      <Unit5>
+        <UsageCount Value="156"/>
+      </Unit157>
+      <Unit158>
         <Filename Value="formlogin.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmLogin"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="31"/>
+        <TopLine Value="30"/>
         <CursorPos Y="49"/>
-        <UsageCount Value="200"/>
-      </Unit5>
-      <Unit6>
+        <UsageCount Value="156"/>
+      </Unit158>
+      <Unit159>
         <Filename Value="formsobre.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmSobre"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="41"/>
         <CursorPos X="78" Y="8"/>
-        <UsageCount Value="201"/>
-      </Unit6>
-      <Unit7>
+        <UsageCount Value="157"/>
+      </Unit159>
+      <Unit160>
         <Filename Value="formgrusu.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmGrUsu"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="41"/>
         <CursorPos Y="48"/>
-        <UsageCount Value="200"/>
-      </Unit7>
-      <Unit8>
+        <UsageCount Value="156"/>
+      </Unit160>
+      <Unit161>
         <Filename Value="formfgrusu.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFGrUsu"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="42"/>
         <CursorPos Y="60"/>
-        <UsageCount Value="200"/>
-      </Unit8>
-      <Unit9>
+        <UsageCount Value="156"/>
+      </Unit161>
+      <Unit162>
         <Filename Value="formusuarios.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmUsuarios"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="59"/>
         <CursorPos Y="158"/>
-        <UsageCount Value="200"/>
-      </Unit9>
-      <Unit10>
+        <UsageCount Value="156"/>
+      </Unit162>
+      <Unit163>
         <Filename Value="formfusu.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFUsu"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="124"/>
         <CursorPos X="12" Y="120"/>
-        <UsageCount Value="200"/>
-      </Unit10>
-      <Unit11>
+        <UsageCount Value="156"/>
+      </Unit163>
+      <Unit164>
         <Filename Value="formrotgru.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRotGru"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="127"/>
         <CursorPos X="57" Y="142"/>
-        <UsageCount Value="200"/>
-      </Unit11>
-      <Unit12>
+        <UsageCount Value="156"/>
+      </Unit164>
+      <Unit165>
         <Filename Value="formexcgrusu.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmExcGrUsu"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="73"/>
         <CursorPos X="13" Y="81"/>
-        <UsageCount Value="200"/>
-      </Unit12>
-      <Unit13>
+        <UsageCount Value="156"/>
+      </Unit165>
+      <Unit166>
         <Filename Value="datatabelas.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="DMTab"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="95"/>
         <CursorPos X="3" Y="97"/>
-        <UsageCount Value="202"/>
-      </Unit13>
-      <Unit14>
+        <UsageCount Value="158"/>
+      </Unit166>
+      <Unit167>
         <Filename Value="formtrsenha.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmTrSenha"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="59"/>
         <CursorPos X="45" Y="74"/>
-        <UsageCount Value="202"/>
-      </Unit14>
-      <Unit15>
+        <UsageCount Value="158"/>
+      </Unit167>
+      <Unit168>
         <Filename Value="formagentes.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmAgentes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="111"/>
         <CursorPos Y="130"/>
-        <UsageCount Value="205"/>
-      </Unit15>
-      <Unit16>
+        <UsageCount Value="161"/>
+      </Unit168>
+      <Unit169>
         <Filename Value="formfagente.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFAgente"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="71"/>
         <CursorPos Y="91"/>
-        <UsageCount Value="205"/>
-      </Unit16>
-      <Unit17>
+        <UsageCount Value="161"/>
+      </Unit169>
+      <Unit170>
         <Filename Value="formfiliais.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFiliais"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="43"/>
         <CursorPos Y="39"/>
-        <UsageCount Value="204"/>
-      </Unit17>
-      <Unit18>
+        <UsageCount Value="160"/>
+      </Unit170>
+      <Unit171>
         <Filename Value="formffilial.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFFilial"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="49"/>
         <CursorPos Y="83"/>
-        <UsageCount Value="204"/>
-      </Unit18>
-      <Unit19>
+        <UsageCount Value="160"/>
+      </Unit171>
+      <Unit172>
         <Filename Value="formequipes.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmEquipes"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="122"/>
         <CursorPos Y="130"/>
-        <UsageCount Value="201"/>
-      </Unit19>
-      <Unit20>
+        <UsageCount Value="157"/>
+      </Unit172>
+      <Unit173>
         <Filename Value="formfequipe.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFEquipe"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="58"/>
         <CursorPos Y="77"/>
-        <UsageCount Value="200"/>
-      </Unit20>
-      <Unit21>
+        <UsageCount Value="156"/>
+      </Unit173>
+      <Unit174>
         <Filename Value="formempresas.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmEmpresas"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="70"/>
         <CursorPos Y="81"/>
-        <UsageCount Value="200"/>
-      </Unit21>
-      <Unit22>
+        <UsageCount Value="156"/>
+      </Unit174>
+      <Unit175>
         <Filename Value="formfempresa.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFEmpresa"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="103"/>
         <CursorPos Y="64"/>
-        <UsageCount Value="201"/>
-      </Unit22>
-      <Unit23>
+        <UsageCount Value="157"/>
+      </Unit175>
+      <Unit176>
         <Filename Value="formregrascomissao.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRgCom"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="99"/>
         <CursorPos X="3" Y="101"/>
-        <UsageCount Value="202"/>
-      </Unit23>
-      <Unit24>
+        <UsageCount Value="158"/>
+      </Unit176>
+      <Unit177>
         <Filename Value="formfregra.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFRegra"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="132"/>
         <CursorPos Y="137"/>
-        <UsageCount Value="200"/>
-      </Unit24>
-      <Unit25>
+        <UsageCount Value="156"/>
+      </Unit177>
+      <Unit178>
         <Filename Value="formvendas.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmVendas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="157"/>
-        <CursorPos X="3" Y="167"/>
-        <UsageCount Value="206"/>
-      </Unit25>
-      <Unit26>
+        <CursorPos X="3" Y="159"/>
+        <UsageCount Value="162"/>
+      </Unit178>
+      <Unit179>
         <Filename Value="datavendas.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="DMVendas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="355"/>
-        <CursorPos X="3" Y="357"/>
-        <UsageCount Value="206"/>
-      </Unit26>
-      <Unit27>
+        <TopLine Value="510"/>
+        <CursorPos X="3" Y="512"/>
+        <UsageCount Value="162"/>
+      </Unit179>
+      <Unit180>
         <Filename Value="formfvenda.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFVenda"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="-1"/>
-        <TopLine Value="304"/>
-        <CursorPos X="26" Y="312"/>
-        <UsageCount Value="205"/>
-      </Unit27>
-      <Unit28>
+        <TopLine Value="240"/>
+        <CursorPos X="53" Y="253"/>
+        <UsageCount Value="161"/>
+      </Unit180>
+      <Unit181>
         <Filename Value="formfaixas.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFaixas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="92"/>
         <CursorPos X="52" Y="108"/>
-        <UsageCount Value="206"/>
-      </Unit28>
-      <Unit29>
+        <UsageCount Value="162"/>
+      </Unit181>
+      <Unit182>
         <Filename Value="formffaixa.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFFaixa"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="108"/>
         <CursorPos X="67" Y="9"/>
-        <UsageCount Value="206"/>
-      </Unit29>
-      <Unit30>
+        <UsageCount Value="162"/>
+      </Unit182>
+      <Unit183>
         <Filename Value="formparcelas.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmParcelas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="78"/>
         <CursorPos Y="97"/>
-        <UsageCount Value="201"/>
-      </Unit30>
-      <Unit31>
+        <UsageCount Value="157"/>
+      </Unit183>
+      <Unit184>
         <Filename Value="formfparcela.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFParcela"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="29"/>
         <CursorPos X="45" Y="78"/>
-        <UsageCount Value="204"/>
-      </Unit31>
-      <Unit32>
+        <UsageCount Value="160"/>
+      </Unit184>
+      <Unit185>
         <Filename Value="formrecautomatico.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRecAutomatico"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="140"/>
         <CursorPos X="20" Y="172"/>
-        <UsageCount Value="200"/>
-      </Unit32>
-      <Unit33>
+        <UsageCount Value="156"/>
+      </Unit185>
+      <Unit186>
         <Filename Value="relbaixacomissao.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRelBaixaComissao"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="63"/>
         <CursorPos Y="75"/>
-        <UsageCount Value="201"/>
-      </Unit33>
-      <Unit34>
+        <UsageCount Value="157"/>
+      </Unit186>
+      <Unit187>
         <Filename Value="formcalcularcomissao.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmCalcularComissao"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="17"/>
         <CursorPos X="27" Y="101"/>
-        <UsageCount Value="201"/>
-      </Unit34>
-      <Unit35>
+        <UsageCount Value="157"/>
+      </Unit187>
+      <Unit188>
         <Filename Value="relpagarcomissao.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRelPagarComissao"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="65"/>
         <CursorPos Y="69"/>
-        <UsageCount Value="201"/>
-      </Unit35>
-      <Unit36>
+        <UsageCount Value="157"/>
+      </Unit188>
+      <Unit189>
         <Filename Value="datasiacon.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="dmScn"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
         <TopLine Value="324"/>
         <CursorPos X="15" Y="324"/>
-        <UsageCount Value="209"/>
-      </Unit36>
-      <Unit37>
+        <UsageCount Value="165"/>
+      </Unit189>
+      <Unit190>
         <Filename Value="formautor.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmAutor"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="22"/>
         <CursorPos X="3" Y="35"/>
-        <UsageCount Value="200"/>
-      </Unit37>
-      <Unit38>
+        <UsageCount Value="156"/>
+      </Unit190>
+      <Unit191>
         <Filename Value="formselcomissao.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmSelComissao"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -427,165 +1756,150 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="119"/>
         <CursorPos X="50" Y="129"/>
-        <UsageCount Value="203"/>
-      </Unit38>
-      <Unit39>
+        <UsageCount Value="159"/>
+      </Unit191>
+      <Unit192>
         <Filename Value="formrecmanual.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRecManual"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="125"/>
         <CursorPos X="16" Y="128"/>
-        <UsageCount Value="201"/>
-      </Unit39>
-      <Unit40>
+        <UsageCount Value="157"/>
+      </Unit192>
+      <Unit193>
         <Filename Value="relparcelaspendentes.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRelParPend"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="59"/>
         <CursorPos Y="78"/>
-        <UsageCount Value="202"/>
-      </Unit40>
-      <Unit41>
+        <UsageCount Value="158"/>
+      </Unit193>
+      <Unit194>
         <Filename Value="formselparcelaspendentes.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmSelParcelasPendentes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="60"/>
         <CursorPos X="15" Y="76"/>
-        <UsageCount Value="200"/>
-      </Unit41>
-      <Unit42>
+        <UsageCount Value="156"/>
+      </Unit194>
+      <Unit195>
         <Filename Value="formreceberparcela.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmReceberParcela"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="51"/>
         <CursorPos X="3" Y="55"/>
-        <UsageCount Value="201"/>
-      </Unit42>
-      <Unit43>
+        <UsageCount Value="157"/>
+      </Unit195>
+      <Unit196>
         <Filename Value="relproducao.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRelProducao"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="75"/>
         <CursorPos Y="92"/>
-        <UsageCount Value="200"/>
-      </Unit43>
-      <Unit44>
+        <UsageCount Value="156"/>
+      </Unit196>
+      <Unit197>
         <Filename Value="formselproducaovendas.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmSelProdVendas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="173"/>
         <CursorPos Y="183"/>
-        <UsageCount Value="200"/>
-      </Unit44>
-      <Unit45>
+        <UsageCount Value="156"/>
+      </Unit197>
+      <Unit198>
         <Filename Value="formpainel.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmPainel"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="173"/>
         <CursorPos Y="208"/>
-        <UsageCount Value="200"/>
-      </Unit45>
-      <Unit46>
+        <UsageCount Value="156"/>
+      </Unit198>
+      <Unit199>
         <Filename Value="datapainel.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="dmPainel"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="80"/>
+        <TopLine Value="88"/>
         <CursorPos X="11" Y="109"/>
-        <UsageCount Value="201"/>
-      </Unit46>
-      <Unit47>
+        <UsageCount Value="157"/>
+      </Unit199>
+      <Unit200>
         <Filename Value="formselresumoperiodo.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmSelResumoPeriodo"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="29"/>
-        <CursorPos Y="38"/>
-        <UsageCount Value="131"/>
-      </Unit47>
-      <Unit48>
+        <TopLine Value="93"/>
+        <CursorPos X="3" Y="105"/>
+        <UsageCount Value="112"/>
+      </Unit200>
+      <Unit201>
         <Filename Value="relresumoperiodo.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRelResumoPeriodo"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="61"/>
         <CursorPos Y="80"/>
-        <UsageCount Value="130"/>
-      </Unit48>
-      <Unit49>
+        <UsageCount Value="111"/>
+      </Unit201>
+      <Unit202>
         <Filename Value="formselcancelamentos.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmSelCancelamentos"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="84"/>
         <CursorPos X="48" Y="94"/>
-        <UsageCount Value="124"/>
-      </Unit49>
-      <Unit50>
+        <UsageCount Value="105"/>
+      </Unit202>
+      <Unit203>
         <Filename Value="relcancelamentos.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRelCancelamentos"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="104"/>
         <CursorPos X="3" Y="115"/>
-        <UsageCount Value="122"/>
-      </Unit50>
-      <Unit51>
+        <UsageCount Value="103"/>
+      </Unit203>
+      <Unit204>
         <Filename Value="formselvendasagente.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmSelVendasAgente"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="89"/>
         <CursorPos X="29" Y="104"/>
-        <UsageCount Value="119"/>
-      </Unit51>
-      <Unit52>
+        <UsageCount Value="100"/>
+      </Unit204>
+      <Unit205>
         <Filename Value="relvendasagente.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRelVendasAgente"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="78"/>
         <CursorPos Y="88"/>
-        <UsageCount Value="118"/>
-      </Unit52>
-      <Unit53>
+        <UsageCount Value="99"/>
+      </Unit205>
+      <Unit206>
         <Filename Value="formimpsiacon.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmImpSiacon"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -593,194 +1907,296 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="56"/>
         <CursorPos X="30" Y="60"/>
-        <UsageCount Value="32"/>
-      </Unit53>
-      <Unit54>
-        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLReport.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="12746"/>
-        <CursorPos Y="12754"/>
-        <UsageCount Value="0"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit54>
-      <Unit55>
-        <Filename Value="..\..\CompLazarus\zeos\src\dbc\ZDbcInterbase6Utils.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="828"/>
-        <CursorPos Y="837"/>
-        <UsageCount Value="3"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit55>
-      <Unit56>
-        <Filename Value="..\..\CompLazarus\zeos\src\dbc\ZDbcOracleUtils.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="707"/>
-        <CursorPos Y="716"/>
-        <UsageCount Value="3"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit56>
-      <Unit57>
-        <Filename Value="..\..\components\tachart\tageometry.pas"/>
-        <UnitName Value="TAGeometry"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="548"/>
-        <CursorPos Y="558"/>
-        <UsageCount Value="3"/>
-      </Unit57>
-      <Unit58>
-        <Filename Value="..\..\components\tachart\tadbsource.pas"/>
-        <UnitName Value="TADbSource"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="166"/>
-        <CursorPos Y="176"/>
-        <UsageCount Value="6"/>
-      </Unit58>
-      <Unit59>
-        <Filename Value="..\..\components\tachart\taseries.pas"/>
-        <UnitName Value="TASeries"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1055"/>
-        <CursorPos Y="1065"/>
-        <UsageCount Value="1"/>
-      </Unit59>
-      <Unit60>
-        <Filename Value="..\..\components\tachart\tacustomsource.pas"/>
-        <UnitName Value="TACustomSource"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="580"/>
-        <CursorPos Y="590"/>
-        <UsageCount Value="2"/>
-      </Unit60>
-      <Unit61>
-        <Filename Value="..\..\components\tachart\tamath.pas"/>
-        <UnitName Value="TAMath"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="127"/>
-        <CursorPos X="3" Y="129"/>
-        <UsageCount Value="2"/>
-      </Unit61>
-      <Unit62>
-        <Filename Value="..\..\components\tachart\tachartutils.pas"/>
-        <UnitName Value="TAChartUtils"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="387"/>
-        <CursorPos X="3" Y="389"/>
-        <UsageCount Value="2"/>
-      </Unit62>
-      <Unit63>
-        <Filename Value="..\..\lcl\stringhashlist.pas"/>
-        <UnitName Value="StringHashList"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="345"/>
-        <CursorPos X="31" Y="355"/>
-        <UsageCount Value="8"/>
-      </Unit63>
-      <Unit64>
-        <Filename Value="..\..\components\codetools\basiccodetools.pas"/>
-        <UnitName Value="BasicCodeTools"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="32"/>
-        <CursorPos X="32" Y="42"/>
-        <UsageCount Value="8"/>
-      </Unit64>
-      <Unit65>
-        <Filename Value="..\..\CompLazarus\fortesreport-ce-master\Source\RLPreviewForm.pas"/>
-        <ComponentName Value="RLPreviewForm"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="1367"/>
-        <CursorPos X="36" Y="1376"/>
-        <UsageCount Value="8"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit65>
-      <Unit66>
-        <Filename Value="..\..\CompLazarus\richmemo\win32\win32richmemoproc.pas"/>
-        <UnitName Value="Win32RichMemoProc"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="246"/>
-        <CursorPos X="10" Y="256"/>
-        <UsageCount Value="8"/>
-      </Unit66>
-      <Unit67>
-        <Filename Value="..\..\lcl\include\customform.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="2193"/>
-        <CursorPos Y="2202"/>
-        <UsageCount Value="11"/>
-      </Unit67>
-      <Unit68>
-        <Filename Value="..\..\lcl\include\containedaction.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="90"/>
-        <CursorPos Y="100"/>
-        <UsageCount Value="11"/>
-      </Unit68>
-      <Unit69>
-        <Filename Value="..\..\lcl\include\customaction.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="237"/>
-        <CursorPos Y="247"/>
-        <UsageCount Value="11"/>
-      </Unit69>
-      <Unit70>
+        <UsageCount Value="13"/>
+      </Unit206>
+      <Unit207>
         <Filename Value="..\..\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="1561"/>
-        <CursorPos Y="1573"/>
-        <UsageCount Value="11"/>
-      </Unit70>
-      <Unit71>
+        <TopLine Value="4198"/>
+        <CursorPos Y="4218"/>
+        <UsageCount Value="3"/>
+      </Unit207>
+      <Unit208>
         <Filename Value="..\..\lcl\include\speedbutton.inc"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="908"/>
-        <CursorPos Y="920"/>
-        <UsageCount Value="11"/>
-      </Unit71>
-      <Unit72>
+        <TopLine Value="966"/>
+        <CursorPos Y="980"/>
+        <UsageCount Value="3"/>
+      </Unit208>
+      <Unit209>
         <Filename Value="..\..\lcl\include\wincontrol.inc"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="5388"/>
-        <CursorPos Y="5398"/>
-        <UsageCount Value="11"/>
-      </Unit72>
-      <Unit73>
+        <TopLine Value="8138"/>
+        <CursorPos Y="8150"/>
+        <UsageCount Value="3"/>
+      </Unit209>
+      <Unit210>
         <Filename Value="..\..\lcl\lclmessageglue.pas"/>
         <UnitName Value="LCLMessageGlue"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="110"/>
         <CursorPos Y="123"/>
-        <UsageCount Value="11"/>
-      </Unit73>
-      <Unit74>
+        <UsageCount Value="8"/>
+      </Unit210>
+      <Unit211>
         <Filename Value="..\..\lcl\interfaces\win32\win32callback.inc"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="2663"/>
-        <CursorPos Y="2675"/>
-        <UsageCount Value="11"/>
-      </Unit74>
-      <Unit75>
+        <TopLine Value="2667"/>
+        <CursorPos Y="2681"/>
+        <UsageCount Value="8"/>
+      </Unit211>
+      <Unit212>
         <Filename Value="..\..\lcl\interfaces\win32\win32object.inc"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="392"/>
-        <CursorPos Y="401"/>
-        <UsageCount Value="11"/>
-      </Unit75>
-      <Unit76>
-        <Filename Value="..\..\CompLazarus\zeos\src\component\ZAbstractRODataset.pas"/>
+        <TopLine Value="411"/>
+        <CursorPos Y="423"/>
+        <UsageCount Value="8"/>
+      </Unit212>
+      <Unit213>
+        <Filename Value="..\..\lcl\include\customedit.inc"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="1871"/>
-        <CursorPos Y="1880"/>
+        <TopLine Value="518"/>
+        <CursorPos Y="529"/>
+        <UsageCount Value="1"/>
+      </Unit213>
+      <Unit214>
+        <Filename Value="controller\vdcon.controller.menu.apoio.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="52" Y="12"/>
+        <UsageCount Value="6"/>
+      </Unit214>
+      <Unit215>
+        <Filename Value="..\..\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="148"/>
+        <CursorPos X="3" Y="159"/>
+        <UsageCount Value="6"/>
+      </Unit215>
+      <Unit216>
+        <Filename Value="..\..\lcl\buttons.pp"/>
+        <UnitName Value="Buttons"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos X="3" Y="43"/>
+        <UsageCount Value="8"/>
+      </Unit216>
+      <Unit217>
+        <Filename Value="controller\vdcon.controller.botaocadastro.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos Y="54"/>
+        <UsageCount Value="16"/>
+      </Unit217>
+      <Unit218>
+        <Filename Value="controller\vdcon.controller.botaooperacoes.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="63"/>
+        <UsageCount Value="16"/>
+      </Unit218>
+      <Unit219>
+        <Filename Value="controller\vdcon.controller.botaorelatorios.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos Y="63"/>
+        <UsageCount Value="16"/>
+      </Unit219>
+      <Unit220>
+        <Filename Value="controller\vdcon.controller.botaoapoio.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos Y="54"/>
+        <UsageCount Value="16"/>
+      </Unit220>
+      <Unit221>
+        <Filename Value="controller\vdcon.controller.botaosair.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="27" Y="53"/>
+        <UsageCount Value="16"/>
+      </Unit221>
+      <Unit222>
+        <Filename Value="controller\vdcon.controller.botaoempresa.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="33" Y="52"/>
+        <UsageCount Value="11"/>
+      </Unit222>
+      <Unit223>
+        <Filename Value="controller\vdcon.controller.botaofaixascomissao.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos Y="62"/>
+        <UsageCount Value="11"/>
+      </Unit223>
+      <Unit224>
+        <Filename Value="controller\vdcon.controller.botaoregrascomissao.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="35"/>
+        <CursorPos X="32" Y="52"/>
+        <UsageCount Value="11"/>
+      </Unit224>
+      <Unit225>
+        <Filename Value="controller\vdcon.controller.botaofiliais.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos Y="62"/>
+        <UsageCount Value="11"/>
+      </Unit225>
+      <Unit226>
+        <Filename Value="controller\vdcon.controller.botaoequipes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos X="33" Y="52"/>
+        <UsageCount Value="11"/>
+      </Unit226>
+      <Unit227>
+        <Filename Value="controller\vdcon.controller.botaoagentes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos Y="62"/>
+        <UsageCount Value="11"/>
+      </Unit227>
+      <Unit228>
+        <Filename Value="controller\vdcon.controller.botaocalculocomissoes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="35"/>
+        <CursorPos X="46" Y="52"/>
         <UsageCount Value="10"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit76>
+      </Unit228>
+      <Unit229>
+        <Filename Value="controller\vdcon.controller.botaorecebimentomanual.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="44" Y="52"/>
+        <UsageCount Value="10"/>
+      </Unit229>
+      <Unit230>
+        <Filename Value="controller\vdcon.controller.botaorecebimentoautomatico.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="35"/>
+        <CursorPos X="48" Y="52"/>
+        <UsageCount Value="10"/>
+      </Unit230>
+      <Unit231>
+        <Filename Value="controller\vdcon.controller.botaoimportarsiacon.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="41" Y="52"/>
+        <UsageCount Value="10"/>
+      </Unit231>
+      <Unit232>
+        <Filename Value="controller\vdcon.controller.botaovendas.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="32" Y="52"/>
+        <UsageCount Value="10"/>
+      </Unit232>
+      <Unit233>
+        <Filename Value="controller\vdcon.controller.botaoparcelaspendentes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="44" Y="52"/>
+        <UsageCount Value="9"/>
+      </Unit233>
+      <Unit234>
+        <Filename Value="controller\vdcon.controller.botaocomissoesperiodo.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="46" Y="52"/>
+        <UsageCount Value="9"/>
+      </Unit234>
+      <Unit235>
+        <Filename Value="controller\vdcon.controller.botaoproducaovendas.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="38" Y="52"/>
+        <UsageCount Value="9"/>
+      </Unit235>
+      <Unit236>
+        <Filename Value="controller\vdcon.controller.botaocancelamentosperiodo.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos X="34" Y="14"/>
+        <UsageCount Value="9"/>
+      </Unit236>
+      <Unit237>
+        <Filename Value="controller\vdcon.controller.botaovendasagente.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="36" Y="52"/>
+        <UsageCount Value="9"/>
+      </Unit237>
+      <Unit238>
+        <Filename Value="controller\vdcon.controller.botaoresumovendas.pas"/>
+        <UnitName Value="vdcon.controller.botaoResumoVendas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="53" Y="52"/>
+        <UsageCount Value="9"/>
+      </Unit238>
+      <Unit239>
+        <Filename Value="controller\vdcon.controller.botaotrocarusuario.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="33" Y="52"/>
+        <UsageCount Value="8"/>
+      </Unit239>
+      <Unit240>
+        <Filename Value="controller\vdcon.controller.botaotrocarsenha.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="33" Y="52"/>
+        <UsageCount Value="8"/>
+      </Unit240>
+      <Unit241>
+        <Filename Value="controller\vdcon.controller.botaogrupousuarios.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="35" Y="52"/>
+        <UsageCount Value="8"/>
+      </Unit241>
+      <Unit242>
+        <Filename Value="controller\vdcon.controller.botaosobre.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="39"/>
+        <CursorPos X="31" Y="52"/>
+        <UsageCount Value="8"/>
+      </Unit242>
+      <Unit243>
+        <Filename Value="..\..\lcl\include\application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2149"/>
+        <CursorPos X="3" Y="2166"/>
+        <UsageCount Value="10"/>
+      </Unit243>
+      <Unit244>
+        <Filename Value="..\..\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3018"/>
+        <CursorPos Y="3031"/>
+        <UsageCount Value="3"/>
+      </Unit244>
+      <Unit245>
+        <Filename Value="..\..\lcl\include\graphic.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="149"/>
+        <CursorPos Y="171"/>
+        <UsageCount Value="4"/>
+      </Unit245>
+      <Unit246>
+        <Filename Value="..\..\lcl\dbctrls.pp"/>
+        <UnitName Value="DBCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1612"/>
+        <CursorPos Y="1625"/>
+        <UsageCount Value="7"/>
+      </Unit246>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
     <JumpHistory HistoryIndex="-1"/>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
 </CONFIG>

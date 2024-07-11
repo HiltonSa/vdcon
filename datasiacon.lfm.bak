@@ -466,7 +466,9 @@ object dmScn: TdmScn
   object sia: TZReadOnlyQuery
     Connection = Siacon
     SQL.Strings = (
-      'SELECT A.CONTRATO, A.NOME, A.DT_VENDA, A.BEM, B.LIN_MOD, A.GRUPO, A.COTA, A.VAL_VEND, A.REPRES, A.TELEFONE, A.CGC_CPF, A.PESS_F_J, A.VAL_PARC, C.SEQ'
+      'SELECT A.CONTRATO, A.NOME, A.DT_VENDA, A.BEM, B.LIN_MOD, '
+      '            A.GRUPO, A.COTA, A.VAL_VEND, A.REPRES, A.TELEFONE, '
+      '            A.CGC_CPF, A.PESS_F_J, A.VAL_PARC, C.SEQ'
       ' FROM ACADE A'
       ' inner join ACBEM b on b.bem=a.bem'
       ' inner join ACREP R on R.REPRES=A.REPRES'

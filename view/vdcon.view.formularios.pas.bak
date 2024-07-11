@@ -1,0 +1,13 @@
+unit vdcon.view.formularios;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, Sysutils;
+
+implementation
+
+end.
+

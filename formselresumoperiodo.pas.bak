@@ -35,7 +35,6 @@ type
     perIni: TDateField;
     SpeedButton4: TSpeedButton;
     SpeedButton7: TSpeedButton;
-    procedure cboPerChange(Sender: TObject);
     procedure cboPerSelect(Sender: TObject);
     procedure FecharExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);

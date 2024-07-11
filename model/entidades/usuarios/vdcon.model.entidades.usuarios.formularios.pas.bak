@@ -1,0 +1,13 @@
+unit vdcon.model.entidades.usuarios.formularios;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, Sysutils;
+
+implementation
+
+end.
+

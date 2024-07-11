@@ -1,0 +1,220 @@
+object FrmEmpresas: TFrmEmpresas
+  Left = -1071
+  Height = 511
+  Top = 212
+  Width = 713
+  ActiveControl = edtPesq
+  Anchors = []
+  BorderStyle = bsNone
+  Caption = 'Empresas'
+  ClientHeight = 511
+  ClientWidth = 713
+  Color = 7283746
+  Font.Color = clWhite
+  Font.Name = 'Segoe UI Light'
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  Position = poMainFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.2.0'
+  object pnAcao: TPanel
+    Left = 0
+    Height = 422
+    Top = 66
+    Width = 150
+    Align = alLeft
+    BevelOuter = bvNone
+    BorderWidth = 5
+    Color = clGrayText
+    Font.Color = clBlack
+    Font.Name = 'Segoe UI Light'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object stBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 488
+    Width = 713
+    Panels = <>
+  end
+  object Panel2: TPanel
+    Left = 150
+    Height = 422
+    Top = 66
+    Width = 563
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 422
+    ClientWidth = 563
+    TabOrder = 2
+    object Panel3: TPanel
+      Left = 0
+      Height = 74
+      Top = 0
+      Width = 563
+      Align = alTop
+      BevelOuter = bvNone
+      ClientHeight = 74
+      ClientWidth = 563
+      Color = 10768896
+      ParentColor = False
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 13
+        Height = 21
+        Top = 6
+        Width = 89
+        Caption = 'Pesquisar por'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 107
+        Height = 21
+        Top = 6
+        Width = 105
+        Caption = 'Pesquisar o que'
+        ParentColor = False
+      end
+      object edtPesq: TEdit
+        Left = 107
+        Height = 29
+        Top = 28
+        Width = 189
+        CharCase = ecUppercase
+        ParentColor = True
+        TabOrder = 0
+      end
+      object cboCampo: TComboBox
+        Left = 13
+        Height = 29
+        Top = 28
+        Width = 89
+        ItemHeight = 21
+        ItemIndex = 1
+        Items.Strings = (
+          'Código'
+          'Fantasia'
+        )
+        ParentColor = True
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'Fantasia'
+      end
+    end
+    object grPesq: TDBGrid
+      Left = 0
+      Height = 323
+      Top = 74
+      Width = 563
+      Align = alClient
+      AutoEdit = False
+      BorderStyle = bsNone
+      Columns = <>
+      DataSource = dsPesq
+      FixedColor = clHotLight
+      FixedCols = 0
+      FixedHotColor = clHotLight
+      Options = [dgTitles, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+      ParentColor = True
+      ReadOnly = True
+      TabOrder = 1
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+    end
+    object nvPesq: TDBNavigator
+      Left = 0
+      Height = 25
+      Top = 397
+      Width = 563
+      Align = alBottom
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 25
+      ClientWidth = 563
+      DataSource = dsPesq
+      Flat = True
+      Options = []
+      TabOrder = 2
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    end
+  end
+  object Panel4: TPanel
+    Left = 0
+    Height = 66
+    Top = 0
+    Width = 713
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 66
+    ClientWidth = 713
+    TabOrder = 3
+    object Label3: TLabel
+      Left = 8
+      Height = 32
+      Top = 16
+      Width = 103
+      Caption = 'Empresas'
+      Font.Color = clWhite
+      Font.Height = -24
+      Font.Name = 'Segoe UI Light'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object dsPesq: TDataSource
+    DataSet = DMPrincipal.psqEmp
+    OnStateChange = dsPesqStateChange
+    left = 44
+    top = 216
+  end
+  object AL: TActionList
+    left = 96
+    top = 216
+    object Pesq: TAction
+      Caption = 'Pesquisar (F10)'
+      ImageIndex = 0
+      OnExecute = PesqExecute
+      ShortCut = 121
+    end
+    object Incluir: TAction
+      Caption = 'Novo (F2)'
+      Hint = 'Incluir Empresa'
+      ImageIndex = 2
+      OnExecute = IncluirExecute
+      ShortCut = 113
+    end
+    object Alterar: TAction
+      Caption = 'Alterar (F3)'
+      Enabled = False
+      Hint = 'Alterar Empresa'
+      ImageIndex = 1
+      OnExecute = AlterarExecute
+      ShortCut = 114
+    end
+    object Excluir: TAction
+      Caption = 'Excluir (F4)'
+      Enabled = False
+      Hint = 'Excluir Empresa'
+      ImageIndex = 6
+      OnExecute = ExcluirExecute
+      ShortCut = 115
+    end
+    object Fechar: TAction
+      Caption = 'Fechar (Esc)'
+      ImageIndex = 7
+      OnExecute = FecharExecute
+    end
+  end
+end

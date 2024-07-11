@@ -1,0 +1,13 @@
+unit vdcon.model.entidades.organizacao.filial;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, Sysutils;
+
+implementation
+
+end.
+

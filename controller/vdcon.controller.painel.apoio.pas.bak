@@ -1,0 +1,56 @@
+unit vdcon.controller.painel.apoio;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, Sysutils, vdcon.controller.interfaces;
+
+type
+
+  { TControllerPainelApoio }
+
+  TControllerPainelApoio = class (TInterfacedObject, iControllerPainelMenu )
+    private
+      FContainer: TComponent;
+    public
+      constructor Create(Container: TComponent);
+      destructor Destroy; override;
+      class function New(Container: TComponent): iControllerPainelMenu;
+      procedure Exibir;
+  end;
+
+implementation
+
+uses vdcon.controller.botaopadrao.factory, vdcon.controller.painel.factory;
+
+{ TControllerPainelApoio }
+
+constructor Tcontrollerpainelapoio.Create(Container: Tcomponent);
+begin
+  FContainer := Container;
+end;
+
+destructor Tcontrollerpainelapoio.Destroy;
+begin
+  inherited Destroy;
+end;
+
+class function Tcontrollerpainelapoio.New(Container: Tcomponent): Icontrollerpainelmenu;
+begin
+  Result := Self.Create(Container);
+end;
+
+procedure Tcontrollerpainelapoio.Exibir;
+begin
+  TControllerPainelFactory.New
+      .Menu(FContainer)
+      .Name('mnApoio')
+      .AddOpcao(TControllerBotaoPadraoFactory.New.Usuario.Show)
+      .AddOpcao(TControllerBotaoPadraoFactory.New.Voltar.Show)
+      .Exibir;
+end;
+
+end.
+

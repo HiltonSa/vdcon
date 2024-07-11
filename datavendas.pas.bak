@@ -253,7 +253,7 @@ type
       dtvenc,dtrec: TDate; receber, recebido, pagar, pago: Double);
     function acharParcela(emp: Integer; ctrato: String; pcl: Integer): Boolean;
     procedure calcularComissoes(periodo: Integer);
-    function abrirRelComissoes(periodo: Integer): Boolean;
+    function abrirRelComissoes(periodo, fil: Integer): Boolean;
     function obterVenda(cod: Integer; contrato: string):Boolean;
     function abrirPeriodo(stSql: string): Boolean;
     function abrirPendenciaComissao(itPsq:Integer; stPesq:String): Boolean;
@@ -369,7 +369,7 @@ var
 begin
   if fil=0
   then stSQL:=Format('select * from RELATORIO_COMISSOES(%d)',[periodo])
-  else stSQL:=Format('select * from RELATORIO_COMISSOES(%d) where FILIAL=%d',[periodo, fil])
+  else stSQL:=Format('select * from RELATORIO_COMISSOES(%d) where FILIAL=%d',[periodo, fil]);
   with comPer do begin
     Close;
     SQL.Clear;

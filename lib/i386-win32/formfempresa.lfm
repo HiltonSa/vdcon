@@ -8,11 +8,12 @@ object FrmFEmpresa: TFrmFEmpresa
   ClientHeight = 331
   ClientWidth = 451
   KeyPreview = True
+  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   Position = poMainFormCenter
   ShowHint = True
-  LCLVersion = '1.6.4.0'
-  object Panel2: TPanel
+  LCLVersion = '2.0.2.0'
+  object pnAcao: TPanel
     Left = 345
     Height = 331
     Top = 0
@@ -24,7 +25,7 @@ object FrmFEmpresa: TFrmFEmpresa
     Color = clMoneyGreen
     ParentColor = False
     TabOrder = 0
-    object SpeedButton1: TSpeedButton
+    object btGravar: TSpeedButton
       Left = 8
       Height = 39
       Top = 216
@@ -33,7 +34,7 @@ object FrmFEmpresa: TFrmFEmpresa
       Flat = True
       Layout = blGlyphTop
     end
-    object SpeedButton2: TSpeedButton
+    object btCancelar: TSpeedButton
       Left = 8
       Height = 39
       Top = 272
@@ -282,7 +283,6 @@ object FrmFEmpresa: TFrmFEmpresa
     end
   end
   object AL: TActionList
-    Images = DMPrincipal.IL
     left = 376
     top = 24
     object Gravar: TAction
